@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breno - Guia de MarkDown</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="home">
+    <script></script>
+    <header>
+        <h1>Seja muito bem-vindo</h1>
+        <h3>Ao espaço onde guardo minhas anotações!😊</h3>
+        <div class="links">
+            <a href="../index.html" target="_self">Página Inicial</a>
+            <a href="../linktree.html" target="_self">LinkTree</a>
+            <a href="../about.html" target="_self">Sobre</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="post">
+            <h2>Guia de MarkDown</h2>
+            <p>
+                <b>Markdown é uma linguagem de marcação</b> leve e simples, usada para formatar texto de
+                forma rápida e eficiente, sem a necessidade de aprender HTML. Ele é frequentemente
+                utilizado para criar documentos legíveis e bem formatados em plataformas como GitHub,
+                blogs e sistemas de documentação.
+                Com o Markdown, você pode adicionar títulos, listas, links, imagens e muito mais,
+                usando uma sintaxe fácil de entender.
+            </p>
+            <p> Um <b>Guia de Markdown - BÁSICO</b> que fará você sobreviver no GitHub,
+                e que, nesta primeira parte, abordará estes temas:
+            </p>
+                <ul>
+                   <li><b><a href="#Basic-text-formatting">A formatação básica de texto:</a></b> Títulos, estilos (negrito, itálico, etc.), citações, blocos de código e cores.</li> <br>
+                   <li><b><a href="#Inclusion-of-multimedia-elements">A inclusão de elementos multimídia:</a></b> Links, imagens e emojis.</li> <br>
+                   <li><b><a href="#Content-organization">A organização do conteúdo:</a></b> Listas (ordenadas, não ordenadas, tarefas), parágrafos e notas de rodapé.</li> <br>
+                   <li><b><a href="#GitHub-specific-features">Recursos específicos do GitHub:</a></b> Menções, alertas, comentários e ignorar formatação.</li> <br>
+                </ul>
+
+                <hr>
+                <h1 id="Basic-text-formatting">A formatação básica de texto:</h1>
+                <h3>1. Títulos:</h3>
+                <p>
+                Como usar: <br>
+                <b>O Markdown permite criar títulos de seis níveis diferentes, de H1 (o maior) a H6 (o menor).<br>
+                Para criar um título, você usa o símbolo # no início da linha, seguido de um espaço e do texto do título.
+                O número de símbolos # indica o nível do título:</b></p>
+                <p>
+                <b># Título H1 <br>
+                ## Título H2 <br>
+                ### Título H3 <br>
+                E assim por diante, até ###### Título H6 </b><br>
+                <br>
+                Índice automático: <br>
+                O GitHub analisa os títulos em seus arquivos Markdown e gera automaticamente um índice (ou sumário) no topo do arquivo.
+                Isso facilita a navegação em documentos longos, permitindo que os leitores cliquem nos títulos para ir diretamente para as seções correspondentes.
+                </p><br><br><br>
+                
+
+                <h3>2. Estilos de Texto:</h3>
+                <p>
+                <b>Negrito:<br>
+                Envolva o texto com dois asteriscos ** ou dois underscores __.</b><br>
+                Exemplo: **texto em negrito** ou __texto em negrito__<br><br>
+
+                <b>Itálico:<br>
+                Envolva o texto com um asterisco * ou um underscore _.</b><br>
+                Exemplo: *texto em itálico* ou _texto em itálico_<br><br>
+
+                <b>Tachado:<br>
+                Envolva o texto com dois tils ~~.</b><br>
+                Exemplo: ~~<s>texto tachado</s>~~<br><br>
+
+                <b>Subscrito:<br>
+                Use as tags html &lt; sub &gt; texto &lt;/sub>.</b><br>
+                Exemplo: <sub>texto tachado</sub><br><br>
+
+                <b>Sobrescrito:<br>
+                Use as tags html &lt; sup &gt; texto &lt; /sup&gt; .</b><br>
+                Exemplo: <sup>texto tachado</sup><br><br>
+
+                <b>Sublinhado:<br>
+                Use as tags html &lt; ins &gt; texto &lt; /ins &gt; .</b><br>
+                Exemplo: <ins>texto tachado</ins>
+                </p><br><br><br>
+
+
+                <h3>3. Citações:</h3>
+                <p>
+                Como usar:<br>
+                <b>Use o símbolo > no início da linha para indicar uma citação.<br>
+                Você pode citar várias linhas, colocando > no início de cada linha.</b><br><br>
+                Exemplo:<br>
+                > Isto é uma citação.<br>
+                > Esta é a segunda linha da citação.
+                </p><br><br><br>
+
+                <h3>4. Bloco de Código:</h3>
+                <p>
+                <b>Código em linha:<br>
+                Envolva o código com crases `.<br>
+                Exemplo: `codigo`<br><br>
+
+                Blocos de código:<br>
+                Envolva o bloco de código com três crases ```.<br>
+                Você pode especificar a linguagem de programação após as três crases iniciais para habilitar o realce de sintaxe.</b><br><br>
+                Exemplo:<br>
+
+                ```python<br>
+                print("Olá, mundo!")```
+                </p><br><br><br>
+
+
+                <h3>5. Cores:</h3>
+                <p>
+                <b>Como usar:<br>
+                Envolva o código de cor (HEX, RGB ou HSL) com crases `.<br>
+                O GitHub exibirá uma pequena amostra da cor ao lado do código.</b><br><br>
+
+                Exemplos:<br>
+                `#FF0000` (vermelho em HEX)<br>
+                `rgb(0, 0, 255)` (azul em RGB)<br>
+                </p><br><br><br>
+
+        
+                <hr>
+                <h1 id="Inclusion-of-multimedia-elements">A inclusão de elementos multimídia:</h1>
+                <h3>1. Links:</h3>
+                <p>
+                <b>Links embutidos:<br>
+                Use a sintaxe [texto do link](URL).</b><br><br>
+                Exemplo: [Clique aqui](https://www.exemplo.com)<br><br>
+
+                <b>Links de seção:<br>
+                Use #nome-da-seção, onde "nome-da-seção" é o texto do título da seção (com espaços substituídos por hífens e letras minúsculas).<br>
+                O github cria essas âncoras automaticamente.</b><br><br>
+
+                <b>Links relativos:<br>
+                Use [texto](caminho/para/arquivo) para criar links para outros arquivos no mesmo repositório.<br>
+                Âncoras personalizadas:</b><br><br>
+                Use tags HTML &lt; a name="nome" &gt; &lt; /a &gt; para criar âncoras personalizadas dentro do documento.<br>
+                Em seguida, use [texto](#nome) para criar um link para essa âncora.
+                </p><br><br><br>
+                
+
+                <h3>2. Imagens:</h3>
+                <p>
+                <b>Como usar:<br>
+                Use a sintaxe ![texto alternativo](URL da imagem).</b><br><br>
+                <b>"texto alternativo"</b> é uma descrição da imagem para acessibilidade.<br>
+                O GitHub suporta URLs de imagens externas e links relativos para imagens no mesmo repositório.<br>
+                </p><br><br><br>
+
+                
+                <h3>3. Emojis:</h3>
+                <p>
+                <b>Como usar:<br>
+                Digite : seguido do código do emoji.</b><br><br>
+                Exemplo: :smile:
+                </p><br><br><br>
+                
+
+                <hr>
+                <h1 id="Content-organization">A organização do conteúdo:</h1>
+                <h3>1. Listas:</h3>
+                <p>
+                <b>Listas não ordenadas:<br>
+                Use hífens -, asteriscos * ou sinais de mais + no início de cada linha.</b><br><br>
+
+                Exemplo:<br>
+                - Item 1<br>
+                - Item 2<br>
+                - Item 3<br><br>
+
+                <b>Listas ordenadas:<br>
+                Use números seguidos de ponto no início de cada linha.</b><br><br>
+                Exemplo:<br>
+                1. Primeiro item<br>
+                2. Segundo item<br>
+                3. Terceiro item<br><br>
+
+                <b>Listas aninhadas:<br>
+                Recue os itens da lista aninhada com espaços.<br>
+                O número de espaços determina o nível de aninhamento.</b><br>
+                </p><br><br><br>
+
+
+                <h3>2. Listas de Tarefas:</h3>
+                <p>
+                <b>Como usar:
+                Use [ ] para tarefas não concluídas e [x] para tarefas concluídas.</b><br><br>
+
+                Exemplo:<br>
+                - [ ] Tarefa 1<br>
+                - [x] Tarefa 2<br>
+                </p><br><br><br>
+
+
+                <h3>3. Parágrafos:</h3>
+                <p>
+                <b>Como usar:<br>
+                Inclua dois espaços no final da primeira linha.<br>
+                Ou inclua uma barra invertida (\) no final da primeira linha.<br>
+                Ou use a tag HTML &lt; br &gt; para criar uma quebra de linha.<br>
+                Ou você deixar uma linha em branco entre duas linhas. </b>
+                </p><br><br><br>
+
+
+                <h3>4. Notas de Rodapé:</h3>
+                <p>
+                <b>Como usar:<br>
+                Use [^numero] para criar a referência da nota de rodapé no texto.<br><br>
+                Use [^numero]: texto da nota de rodapé para definir o conteúdo da nota de rodapé.</b><br><br>
+
+                Exemplo:<br>
+                [^1]: Minha referências.<br>
+                [^2]: Minha outra referências.
+                </p><br><br><br>
+
+
+                <hr>
+                <h1 id="GitHub-specific-features">Recursos específicos do GitHub:</h1>
+                <h3>1. Menções:</h3>
+                <p>
+                <b>Como usar:<br>
+                Digite @ seguido do nome de usuário ou da equipe que você deseja mencionar.<br>
+                Isso enviará uma notificação para a pessoa ou equipe mencionada.</b>
+                </p><br><br><br>
+
+
+                <h3>2. Alertas:</h3>
+                <p>
+                <b>Como usar:<br>
+                Use > [!TIPO] para criar alertas, onde "TIPO" pode ser NOTE, TIP, IMPORTANT, WARNING ou CAUTION.</b><br><br>
+                Exemplo:<br>
+                > [!NOTE]<br>
+                > [!TIP]
+                </p><br><br><br>
+                
+
+                <h3>3. Ocultar Conteúdo (comentar):</h3>
+                <p>
+                <b>Como usar:<br>
+                Envolva o conteúdo que você deseja ocultar com comentários HTML.</b><br><br>
+                Exemplo:<br>
+                &lt; !-- Isso é um comentário: Este texto não será exibido. -- &gt;
+                </p><br><br><br>
+
+
+                <h3>4. Ignorar Formatação:</h3>
+                <p>
+                <b>Como usar:<br>
+                Use uma barra invertida \ antes do caractere Markdown que você deseja ignorar.</b><br>
+                </p>
+        </div>
+    </div>
+    <footer>
+        <p>2025 - Breno A.</p>
+    </footer>
+</body>
+</html>
