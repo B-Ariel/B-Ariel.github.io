@@ -50,8 +50,7 @@ body.linktree {
 }
 
 
-
-/*CSS da página: home
+/*CSS da página: home e adjacentes
 */
 body.home {
     font-family: 'Times New Roman', Times, serif, arial, helvetica, sans-serif;
@@ -105,4 +104,34 @@ body.home {
 .home .links a:hover {
     background: rgb(200,200,200);
     color: rgb(0,0,0);
+}
+.home .links-post{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+}
+.home .links-post a{
+    background: rgb(25,25,100);
+    color: rgb(255,255,255);
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    width: auto;
+    border-radius: 5px;
+}
+.home .links-post a:hover {
+    background: rgb(70,130,180);
+    color: rgb(255,255,255);
+}
+/* Formatação dos links "NORMAIS"
+*/
+.home .links-normal a{
+    color: rgb(0,0,255);
+    text-decoration: none;
+}
+.home .links-normal a:hover{
+    color: rgb(255,0,0);
+    text-decoration: underline;
 }
