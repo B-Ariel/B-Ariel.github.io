@@ -9,7 +9,6 @@
     font-size: 20px;
 }
 body.linktree {
-    font-style: italic;
     background: linear-gradient(45deg, rgba(255,0,0,0.8), rgba(0,0,255,0.8));
     display: flex;
     justify-content: center;
@@ -48,9 +47,14 @@ body.linktree {
 .linktree .links a:hover {
     background: rgb(0,90,180);
 }
+.linktree footer {
+    color: rgb(0,0,0);
+    padding: 10px;
+    margin-top: 20px;
+}
 
 
-/*CSS da página: home e adjacentes
+/*CSS da página: home e adjacentes (about e posts)
 */
 body.home {
     font-family: 'Times New Roman', Times, serif, arial, helvetica, sans-serif;
@@ -81,6 +85,7 @@ body.home {
 .home footer {
     background: rgb(50,50,50);
     color: rgb(255,255,255);
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     padding: 10px;
     margin-top: 20px;
@@ -125,7 +130,9 @@ body.home {
     background: rgb(70,130,180);
     color: rgb(255,255,255);
 }
-/* Formatação dos links "NORMAIS"
+
+
+/* Formatação dos "LINKS NORMAIS"
 */
 .home .links-normal a{
     color: rgb(0,0,255);
@@ -134,4 +141,18 @@ body.home {
 .home .links-normal a:hover{
     color: rgb(255,0,0);
     text-decoration: underline;
+}
+
+/* Formatação dos "EXEMPLOS DE CÓDIGO"
+*/
+.home .code-example {
+    background: rgb(0,0,0);
+    color: rgb(0,255,0);
+    font-family: serif;
+    text-decoration: none;
+    font-size: auto;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0,0,0);
 }
