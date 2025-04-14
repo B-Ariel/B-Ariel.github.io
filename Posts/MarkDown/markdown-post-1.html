@@ -33,9 +33,8 @@
                 <b>Markdown é uma linguagem de marcação</b> leve e simples, usada para formatar texto de
                 forma rápida e eficiente, sem a necessidade de aprender HTML. Ele é frequentemente
                 utilizado para criar documentos legíveis e bem formatados em plataformas como GitHub,
-                blogs e sistemas de documentação.
-                Com o Markdown, você pode adicionar títulos, listas, links, imagens e muito mais,
-                usando uma sintaxe fácil de entender.
+                blogs e sistemas de documentação. Com o Markdown, você pode adicionar títulos, listas, links,
+                imagens e muito mais, usando uma sintaxe fácil de entender.
             </p>
             <p> Um <b>Guia de Markdown - BÁSICO</b> que fará você sobreviver no GitHub,
                 e que, nesta primeira parte, abordará estes temas:
@@ -63,7 +62,8 @@
             <h3>1. Títulos:</h3>
             <p>
                 <b>O Markdown permite criar títulos de seis níveis diferentes, de H1 (o maior) a H6 (o menor).<br>
-                    Para criar um título, você usa o símbolo # (hash) no início da linha, seguido de um espaço e do
+                    Para criar um título, você usa o símbolo # (cerquilha / hash) no início da linha, seguido de um
+                    espaço e do
                     texto do
                     título.
                     O número de símbolos # (hash) indica o nível do título</b><br><br>
@@ -77,40 +77,42 @@
                         ###### Título H6<br><code>
                     </div><br>
                     <div class="code-example">
-                        <h1> Título H1 </h1>
+                        <code><h1> Título H1 </h1>
                         <h2> Título H2 </h2>
                         <h3> Título H3 </h3>
                         <h4> Título H4 </h4>
                         <h5> Título H5 </h5>
-                        <h6> Título H6 </h6>
-                    </div><br>
+                        <h6> Título H6 </h6></code>
+            </div><br>
 
-                    <b>OBSERVE:<br>
-                    Índice automático:</b><br>
-                    <b>O GitHub analisa os títulos em seus arquivos Markdown e gera automaticamente um índice (ou sumário) no topo do arquivo.</b>
-                    Isso facilita a navegação em documentos longos, permitindo que os leitores cliquem nos títulos para ir diretamente para as seções correspondentes.
-                </p><br><br><br>            
+            <b>OBSERVE:<br>
+                Índice automático:</b><br>
+            <b>O GitHub analisa os títulos em seus arquivos Markdown e gera automaticamente um índice (ou sumário) no
+                topo do arquivo.</b>
+            Isso facilita a navegação em documentos longos, permitindo que os leitores cliquem nos títulos para ir
+            diretamente para as seções correspondentes.
+            </p><br><br><br>
 
-                <h3>2. Estilos de Texto:</h3>
-                <p>
-                    <b>Negrito:<br>
-                    Envolva o texto com dois ** (asteriscos) ou dois __ (sublinhados / underscores).</b><br><br>
-                    Exemplo:<br>
-                    <div class="code-example">
-                        <code>**texto em negrito** ou __texto em negrito__<br></code>
+            <h3>2. Estilos de Texto:</h3>
+            <p>
+                <b>Negrito:<br>
+                    Envolva o texto com dois ** (asteriscos) ou dois __ (sublinhados).</b><br><br>
+                Exemplo:<br>
+            <div class="code-example">
+                <code>**texto em negrito** ou __texto em negrito__<br></code>
             </div><br>
             <div class="code-example">
-                <b>texto em negrito</b>
+                <code>Isso aqui está em negrito: <b>texto em negrito</b></code>
             </div><br><br>
 
             <b>Itálico:<br>
-                Envolva o texto com um *(asterisco) ou um _ (sublinhado / underscore).</b><br><br>
+                Envolva o texto com um *(asterisco) ou um _ (sublinhado).</b><br><br>
             Exemplo:<br>
             <div class="code-example">
                 <code>*texto em itálico* ou _texto em itálico_</code>
             </div><br>
             <div class="code-example">
-                <i>texto em itálico</i>
+                <code>Isso aqui está em itálico: <i>texto em itálico</i></code>
             </div><br><br>
 
             <b>Tachado:<br>
@@ -120,7 +122,7 @@
                 <code>~~texto tachado~~</code>
             </div><br>
             <div class="code-example">
-                <s>texto tachado</s>
+                <code>Isso aqui está tachado: <s>texto tachado</s></code>
             </div><br><br>
 
             <b>Subscrito:<br>
@@ -130,7 +132,7 @@
                 <code>Isso aqui está subscrito: &lt;sub&gt; texto subscrito &lt;/sub&gt;</code>
             </div><br>
             <div class="code-example">
-                Isso aqui está subscrito: <sub>texto subscrito</sub>
+                <code>Isso aqui está subscrito: <sub>texto subscrito</sub></code>
             </div><br><br>
 
             <b>Sobrescrito:<br>
@@ -140,7 +142,7 @@
                 <code>Isso aqui está sobrescrito: &lt;sup&gt; texto sobrescrito &lt;/sup&gt;</code>
             </div><br>
             <div class="code-example">
-                Isso aqui está sobrescrito: <sup> texto sobrescrito </sup>
+                <code>Isso aqui está sobrescrito: <sup> texto sobrescrito </sup></code>
             </div><br><br>
 
             <b>Sublinhado:<br>
@@ -150,9 +152,14 @@
                 <code>Isso aqui está sublinhado: &lt;ins&gt; texto sublinhado &lt;/ins&gt;</code>
             </div><br>
             <div class="code-example">
-                Isso aqui está sublinhado: <ins> texto sublinhado </ins>
-            </div>
-            </p><br><br><br>
+                <code>Isso aqui está sublinhado: <ins> texto sublinhado </ins></code>
+            </div><br>
+            <b>OBSERVE:<br>
+                O Markdown foi criado com a intenção de ser integrável com HTML, permitindo assim, uma
+                utilização de muitas tags HTML para estilizar conteúdos que a sintaxe padrão do Markdown não suporta.
+                Note que, muitas tags HTML podem ser usadas (mas lembre-se que não são todas as tags existentes) porque,
+                é o GitHub
+                que irá renderizá-las corretamente.</b></p><br><br><br>
 
 
             <h3>3. Citações:</h3>
@@ -166,10 +173,10 @@
             </div><br>
 
             <div class="code-example">
-                <blockquote>
+                <code><blockquote>
                     Isto é uma citação.<br>
                     Esta é a segunda linha da citação.
-                </blockquote>
+                </blockquote></code>
             </div>
             </p><br><br><br>
 
@@ -184,7 +191,7 @@
             </div><br>
 
             <div class="code-example">
-                console.log("Olá, mundo!");
+                <code>console.log("Olá, mundo!");</code>
             </div><br><br>
 
             <b>Blocos de código:<br>
@@ -198,7 +205,7 @@
             </div><br>
 
             <div class="code-example">
-                print("Olá, mundo!")
+                <code>print("Olá, mundo!")</code>
             </div>
             </p><br><br><br>
 
@@ -240,41 +247,41 @@
                 <code>Para ir na seção - "A Formatação Básica De Texto": [Clique aqui](#a-formatação-básica-de-texto)</code>
             </div><br>
             <div class="code-example links-normal">
-                Para ir na seção - "A Formatação Básica De Texto": <a href="#basic-text-formatting">Clique aqui</a>
+                <code>Para ir na seção - "A Formatação Básica De Texto": <a href="#basic-text-formatting">Clique aqui</a></code>
             </div><br><br>
 
             <b>OBSERVE:<br>
                 O github cria essas âncoras automaticamente.</b><br><br>
 
             <b>Links relativos:<br>
-                Use [texto](caminho/para/arquivo) para criar links para outros <b>arquivos no mesmo
-                    repositório.</b><br><br>
-                Exemplo:<br>
-                <div class="code-example">
-                    <code>Use esse link para ver: [meus dogs](Main/Images/pingo-and-valente(pinscher-and-akita).jpg)<br><br>
+                Use [texto](caminho/para/arquivo) para criar links para outros arquivos no mesmo
+                repositório.</b><br><br>
+            Exemplo:<br>
+            <div class="code-example">
+                <code>Use esse link para ver: [meus dogs](Main/Images/pingo-and-valente(pinscher-and-akita).jpg)<br><br>
                     Use esse link para ver: [a página inicial](Main/index.html)</code>
-                </div><br><br>
-                <div class="code-example links-normal">
-                    Use esse link para ver: <a href="../../Images/pingo-and-valente(pinscher-and-akita)-0.jpg"
+            </div><br><br>
+            <div class="code-example links-normal">
+                <code>Use esse link para ver: <a href="../../Images/pingo-and-valente(pinscher-and-akita)-0.jpg"
                         target="_blank">meus dogs</a><br><br>
-                    Use esse link para ver: <a href="../../index.html" target="_self">a página inicial</a>
+                    Use esse link para ver: <a href="../../index.html" target="_self">a página inicial</a></code>
+            </div>
+            <b>OBSERVE:<br>
+                O texto do link deve estar em uma única linha, e usar a /(barra), pois é um link
+                relativo</b><br><br><br>
 
-                </div>
-                OBSERVE:<br>
-                O texto do link deve estar em uma única linha, e usar a /(barra), pois é um link relativo<br><br><br>
-
-                Âncoras personalizadas:
-            </b><br>
-            Use tags HTML &lt;a name="nome"&gt;&lt;/a&gt; para criar âncoras personalizadas dentro do
-            documento.<br>
-            Em seguida, use [texto](#nome) para criar um link para essa âncora.<br><br>
+            <b>Âncoras personalizadas:
+                <br>
+                Use tags HTML &lt;a name="nome"&gt;&lt;/a&gt; para criar âncoras personalizadas dentro do
+                documento.<br>
+                Em seguida, use [texto](#nome) para criar um link para essa âncora.</b><br><br>
             Exemplo:<br>
             <div class="code-example">
                 <code>&lt;a name="basic-text-formatting"&gt;&lt;/a&gt;<br><br>
                 Já qui fica o link - [Um link personalizado](#basic-text-formatting)</code>
             </div><br>
             <div class="code-example links-normal">
-                Já qui fica o link - <a href="#basic-text-formatting">Um link personalizado</a>
+                <code>Já qui fica o link - <a href="#basic-text-formatting">Um link personalizado</a></code>
             </div><br><br>
 
             <b>OBSERVE:<br>
@@ -293,11 +300,14 @@
                 <code>![meus dogs](../Images/pingo-and-valente(pinscher-and-akita).jpg)<br><br>
                     ![minha outra dog](Main/Images/princesa-the-pinscher.jpg)</code>
             </div><br>
-            <div class="code-example"
+            <div
                 style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; margin-left: auto;">
-                <img src="../../Images/pingo-and-valente(pinscher-and-akita)-1.jpg" alt="meus dogs" width="250"
+                <img src="../../Images/pingo-and-valente(pinscher-and-akita)-1.jpg" alt="meus dogs" width="230"
                     height="auto">
-                <img src="../../Images/princesa-the-pinscher.jpg" alt="minha outra dog" width="250" height="auto">
+            </div><br>
+            <div
+                style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; margin-left:auto;">
+                <img src="../../Images/princesa-the-pinscher.jpg" alt="minha outra dog" width="230" height="auto">
             </div><br><br>
 
             <b>OBSERVE:<br>
@@ -314,8 +324,8 @@
                           :smiley: :relaxed: :wink:</code>
             </div><br>
             <div class="code-example" style="font-size: 50px;">
-                😄 😆 😊<br>
-                😃 ☺️ 😉
+                <code>😄 😆 😊<br>
+                😃 ☺️ 😉</code>
             </div>
             </p><br><br><br>
 
@@ -333,11 +343,11 @@
                 + Item 3</code>
             </div><br>
             <div class="code-example">
-                <ul>
+                <code><ul>
                     <li>Item 1</li>
                     <li>Item 2</li>
                     <li>Item 3</li>
-                </ul>
+                </ul></code>
             </div><br><br>
 
             <b>Listas ordenadas:<br>
@@ -354,12 +364,12 @@
                 1. Terceiro item</code>
             </div><br>
             <div class="code-example">
-                As duas opções ficam a mesma coisa:<br>
+                <code>As duas opções ficam a mesma coisa:<br>
                 <ol>
                     <li>Primeiro item</li>
                     <li>Segundo item</li>
                     <li>Terceiro item</li>
-                </ol>
+                </ol></code>
             </div><br><br>
 
             <b>Listas aninhadas:<br>
@@ -374,12 +384,12 @@
 - Item 2</code></pre>
             </div><br>
             <div class="code-example">
-                <pre>● Item 1
+                <pre><code>● Item 1
     ○ Item 1.1
     ○ Item 1.2
        ■ Item 1.2.1
        ■ Item 1.2.2
-● Item 2</pre>
+● Item 2</code></pre>
             </div><br>
 
             <b>OBSERVE:<br>
@@ -400,8 +410,8 @@
                 - [x] Fazer um site</code>
             </div><br>
             <div class="code-example">
-                □ Ser famoso<br>
-                ■ Fazer um site
+                <code>□ Ser famoso<br>
+                ■ Fazer um site</code>
             </div>
             </p><br><br><br>
 
@@ -414,18 +424,66 @@
                     Ou você deixa uma linha em branco entre duas linhas.</b><br><br>
                 Exemplo<br>
             <div class="code-example" style="display: flex; flex-wrap:wrap; margin-left:auto;">
-                <code>Primum praeceptum: Diliges Deum super omnia, et non habebis deos alienos. \<br><br>
-            Secundum praeceptum: Nolite facere idola, neque simulacra colatis. \<br><br>
-            Tertium praeceptum: Noli in vanum nomen Dei accipere. \<br><br>
-            Quartum praeceptum: Sabbata et festivitates sanctas observa ex mandato. \<br><br>
-            Quintum praeceptum: Honora patrem et matrem.&lt;br&gt;<br><br>
-            Sextum praeceptum: Non occides.&lt;br&gt;<br><br>
-            Septimum praeceptum: Non moechaberis.&lt;br&gt;<br><br>
-            Octavum praeceptum: Non furtum facies.<br><br>
-            
-            Nonum praeceptum: Falsum testimonium non dices.<br><br>
-            
-            Decimum praeceptum: Non concupisces uxorem proximi tui.</code>
+                <code>Primum praeceptum:&lt;br&gt;<br>
+                      Diliges Deum super omnia, et non habebis deos alienos. \<br>
+
+                      Secundum praeceptum:&lt;br&gt;<br>
+                      Nolite facere idola, neque simulacra colatis. \<br>
+
+                      Tertium praeceptum:&lt;br&gt;<br>
+                      Noli in vanum nomen Dei accipere. \<br>
+
+                      Quartum praeceptum:&lt;br&gt;<br>
+                      Sabbata et festivitates sanctas observa ex mandato. \<br>
+
+                      Quintum praeceptum:&lt;br&gt;<br>
+                      Honora patrem et matrem. \<br>
+
+                      Sextum praeceptum:&lt;br&gt;<br>
+                      Non occides. \<br>
+
+                      Septimum praeceptum:&lt;br&gt;<br>
+                      Non moechaberis. \<br>
+                      
+                      Octavum praeceptum:&lt;br&gt;<br>
+                      Non furtum facies. \<br>
+
+                      Nonum praeceptum:&lt;br&gt;<br>
+                      Falsum testimonium non dices. \<br>
+
+                      Decimum praeceptum:&lt;br&gt;<br>
+                      Non concupisces uxorem proximi tui.</code>
+            </div><br><br>
+            <div class="code-example">
+                <code>Primum praeceptum:<br>
+                Diliges Deum super omnia, et non habebis deos alienos.<br>
+
+                Secundum praeceptum:<br>
+                Nolite facere idola, neque simulacra colatis.<br>
+
+                Tertium praeceptum:<br>
+                Noli in vanum nomen Dei accipere.<br>
+
+                Quartum praeceptum:<br>
+                Sabbata et festivitates sanctas observa ex mandato.<br>
+
+                Quintum praeceptum:<br>
+                Honora patrem et matrem.<br>
+
+                Sextum praeceptum:<br>
+                Non occides.<br>
+
+                Septimum praeceptum:<br>
+                Non moechaberis.<br>
+
+                Octavum praeceptum:<br>
+                Non furtum facies.<br>
+
+                Nonum praeceptum:<br>
+                Falsum testimonium non dices.<br>
+
+                Decimum praeceptum:<br>
+                Non concupisces uxorem proximi tui.<br></code>
             </div>
             </p><br><br><br>
 
@@ -436,7 +494,7 @@
                     Use essa sintaxe [^numero] para criar a referência da nota de rodapé no texto.<br><br>
                     Use essa sintaxe [^numero]: texto da nota para definir o conteúdo da nota de rodapé.</b><br><br>
                 Exemplo:<br>
-                <div class="code-example">
+            <div class="code-example">
                 <code>&lt;!-- As duas primeiras linhas ficam no texto normal,<br>e as duas ultimas são
                     as que renderizam no final da página<br>
                     --&gt;<br><br>
@@ -446,11 +504,11 @@
                 [^2]: Minha outra referência.</code>
             </div><br><br>
 
-                <b>OBSERVE:<br>
-                    O lugar em que a nota de rodapé fica no Markdown, não influenciará a
-                    posição em que a nota será renderizada. Você pode escrever a nota
-                    logo após sua referência, e ela continuará sendo interpretada na
-                    parte inferior do Markdown. 
+            <b>OBSERVE:<br>
+                O lugar em que a nota de rodapé fica no Markdown, não influenciará a
+                posição em que a nota será renderizada. Você pode escrever a nota
+                logo após sua referência, e ela continuará sendo interpretada na
+                parte inferior do Markdown.</b>
             </p><br><br><br>
 
 
@@ -460,43 +518,43 @@
             <p>
                 <b>Digite @ (arroba) seguido do nome de usuário ou da equipe que você deseja mencionar.<br>
                     Isso enviará uma notificação para a pessoa ou equipe mencionada.</b><br><br>
-                    Exemplo:<br>
-                    <div class="code-example">
-                        <code>@B-Ariel</code>
-                    </div>
+                Exemplo:<br>
+            <div class="code-example">
+                <code>@B-Ariel</code>
+            </div>
             </p><br><br><br>
 
 
             <h3>2. Alertas:</h3>
             <p>
-                    <b>Use essa sintaxe > [!TIPO] para criar alertas, onde "TIPO" pode ser NOTE, TIP, IMPORTANT, WARNING ou
+                <b>Use essa sintaxe > [!TIPO] para criar alertas, onde "TIPO" pode ser NOTE, TIP, IMPORTANT, WARNING ou
                     CAUTION.</b><br><br>
                 Exemplo:<br>
-                <div class="code-example">
-                    > [!NOTA]<br>
+            <div class="code-example">
+                <code>> [!NOTE]<br>
                     > Informações úteis que os usuários devem saber,
                     mesmo quando estiverem lendo superficialmente o conteúdo.<br><br>
-                    > [!DICA]<br>
+                    > [!TIP]<br>
                     > Conselhos úteis para fazer as coisas melhor ou mais facilmente.<br><br>
-                    > [!IMPORTANTE]<br>
+                    > [!IMPORTANT]<br>
                     > Informações importantes que os usuários precisam saber para atingir seus objetivos.<br><br>
-                    > [!AVISO]<br>
+                    > [!WARNING]<br>
                     > Informações urgentes que precisam de atenção imediata do usuário para evitar problemas.<br><br>
-                    > [!CUIDADO]<br>
-                    > Aconselha sobre riscos ou resultados negativos de certas ações.
-                </div>
+                    > [!CAUTION]<br>
+                    > Aconselha sobre riscos ou resultados negativos de certas ações.</code>
+            </div>
             </p><br><br><br>
 
 
             <h3>3. Ocultar Conteúdo (comentar):</h3>
             <p>
-                    <b>Envolva o conteúdo que você deseja ocultar com comentários HTML.</b><br><br>
+                <b>Envolva o conteúdo que você deseja ocultar com comentários HTML.</b><br><br>
                 Exemplo:<br>
-                <div class="code-example">
-                &lt; !-- Isso é um comentário: Este texto não será exibido na renderização da página,
+            <div class="code-example">
+                <code>&lt; !-- Isso é um comentário: Este texto não será exibido na renderização da página,
                     apenas no código fonte.<br>
-                -- &gt;
-                </div>
+                -- &gt;</code>
+            </div>
             </p><br><br><br>
 
 
@@ -504,17 +562,17 @@
             <p>
                 <b>Como usar:<br>
                     Use uma \ (barra invertida) antes do caractere Markdown que você deseja ignorar.</b><br><br>
-                    Exemplo:<br>
-                    <div class="code-example">
-                        O primeiro é um título, já o segundo, não:<br>
+                Exemplo:<br>
+            <div class="code-example">
+                <code>O primeiro é um título, já o segundo, não:<br>
                         # Olá, mundo!<br>
-                        \# Olá, mundo!<br>
-                    </div><br>
-                    <div class="code-example">
-                        O primeiro é um título, já o segundo, não:<br>
+                        \# Olá, mundo!<br></code>
+            </div><br>
+            <div class="code-example">
+                <code>O primeiro é um título, já o segundo, não:<br>
                         <h1>Olá, mundo!</h1>
-                        # Olá, mundo!<br>
-                    </div>
+                        # Olá, mundo!<br></code>
+            </div>
             </p><br><br><br>
 
 

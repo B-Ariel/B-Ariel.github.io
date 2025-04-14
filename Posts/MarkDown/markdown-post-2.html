@@ -48,17 +48,35 @@
       <h1 id="tables">Tabelas:</h1>
       <h3>1. Criação de Tabelas:</h3>
       <p>
-        <b>Utilize pipes/ barras verticais (|) e hífens (-) para estruturar tabelas.</b><br>
+        <b>Utilize | (barras verticais / pipes) e - (hífens / traços) para estruturar tabelas.</b><br>
         A linha de cabeçalho <b>deve ter no mínimo três hífens</b>.<br>
-        E se quiser exibir uma barra vertical (|) dentro de uma célula, preceda-a com uma
-        barra invertida (\|).<br><br>
+        <b>E se quiser exibir uma | (barras verticais / pipes) dentro de uma célula, preceda-a com uma
+          barra invertida (\|).</b><br><br>
         Exemplo:<br>
-      <pre>
+      <div class="code-example">
+        <pre><code>
 | Cabeçalho 1 | Cabeçalho 2 |
 | ----------- | ----------- |
 | Célula 1    | Célula 2    |
-| Célula 3    | Célula 4    |
+| Célula 3    | Célula 4    |</code>
             </pre>
+      </div><br>
+      <div class="code-example">
+        <table border="1" cellpadding="5" cellspacing="5">
+          <tr>
+            <th>Cabeçalho 1</th>
+            <th>Cabeçalho 2</th>
+          </tr>
+          <tr>
+            <td>Célula 1</td>
+            <td>Célula 2</td>
+          </tr>
+          <tr>
+            <td>Célula 3</td>
+            <td>Célula 4</td>
+          </tr>
+        </table>
+      </div>
       </p><br><br><br>
 
 
@@ -67,28 +85,76 @@
         <b>Dentro das tabelas, você pode usar links, blocos de código embutidos e estilos</b><br>
         de texto, como negrito, itálico etc.<br><br>
         Exemplo:<br>
-      <pre>
+      <div class="code-example">
+        <pre><code>
 | Comandos do prompt de comando | Descrição |
 | --- | --- |
 | `cls` | *Limpa* a tela. |
 | `mkdir` | **Cria** uma Pasta. |
 | `color` | *Configura as cores.* |
-            </pre>
+        </code></pre>
+      </div><br>
+      <div class="code-example">
+        <table border="1" cellpadding="5" cellspacing="5">
+          <tr>
+            <th>Comandos do prompt de comando</th>
+            <th>Descrição</th>
+          </tr>
+          <tr>
+            <td>cls</td>
+            <td>Limpa a tela.</td>
+          </tr>
+          <tr>
+            <td>mkdir</td>
+            <td><b>Cria</b> uma Pasta.</td>
+          </tr>
+          <tr>
+            <td>color</td>
+            <td>Configura as cores.</td>
+          </tr>
+        </table>
+      </div>
       </p><br><br><br>
 
 
       <h3>3. Alinhamento de Texto:</h3>
       <p>
-        Use dois pontos para alinhar texto <b>à esquerda (:---), ao centro (:---:) ou à
-          direita (---:).</b><br><br>
+        <b>Use essa sintaxe, que utiliza : (dois pontos) e - (hífens / traços) para alinhar texto
+          à esquerda (:---), ao centro (:---:) ou à direita (---:).</b><br><br>
         Exemplo:<br>
-      <pre>
+      <div class="code-example">
+        <pre><code>
 | Na Esquerda | No Centro | Na Direita   |
 | :---        |   :---:   |         ---: |
-| Nome:Blue   | #0000FF   | rgb(0,0,255) |
 | Nome:Red    | #FF0000   | rgb(255,0,0) |
 | Nome:Green  | #00FF00   | rgb(0,255,0) |
-            </pre>
+| Nome:Blue   | #0000FF   | rgb(0,0,255) |
+            </code></pre>
+      </div><br>
+      <div class="code-example">
+        <table border="1" cellpadding="5" cellspacing="5">
+          <tr>
+            <th>Na Esquerda</th>
+            <th>No Centro</th>
+            <th>Na Direita</th>
+          </tr>
+          <tr>
+            <td>Nome:Red</td>
+            <td>#FF0000</td>
+            <td>rgb(255,0,0)</td>
+          </tr>
+          <tr>
+            <td>Nome:Green</td>
+            <td>#00FF00</td>
+            <td>rgb(0,255,0)</td>
+          </tr>
+          <tr>
+            <td>Nome:Blue</td>
+            <td>#0000FF</td>
+            <td>rgb(0,0,255)</td>
+          </tr>
+        </table>
+      </div>
       </p><br><br><br>
 
 
@@ -103,16 +169,25 @@
         <b>Também é importante que adicione open à tag &lt; details &gt; para que a seção seja exibida
           aberta por padrão.</b><br>
         Exemplo:<br><br>
-        &lt; details open &gt;<br>
-        &lt; summary &gt; Dicas para seções recolhidas &lt; /summary &gt;<br>
-        ### Você pode adicionar um cabeçalho<br><br>
-
-        Você pode adicionar texto dentro de uma seção recolhida.<br>
-        Você também pode adicionar uma imagem ou um bloco de código.<br><br>
+      <div class="code-example">
+        <code>&lt;details open&gt;<br>
+        &lt;summary&gt; Dicas para seções recolhidas &lt;/summary&gt;<br><br>
+        ### Você pode adicionar cabeçalhos, códigos etc.<br><br>
         ```Python<br>
-        print("Olá Mundo")<br>
-        ```<br>
-        &lt; /details &gt;
+          print("Olá Mundo")<br>
+          ```<br>
+          &lt;/details&gt;</code>
+      </div><br>
+      <div class="code-example">
+        <details open>
+          <code><summary> Dicas para seções recolhidas </summary>
+            <h3>Você pode adicionar cabeçalhos, códigos etc.</h3>
+            print("Olá Mundo")</code>
+        </details>
+      </div><br>
+      <b>OBSERVE:<br>
+        Você pode adicionar texto dentro de uma seção recolhida.<br>
+        Você também pode adicionar uma imagem ou um bloco de código.</b>
       </p><br><br><br>
 
 
@@ -125,14 +200,32 @@
         Exemplo:<br><br>
         <b>Para criar um diagrama com Mermaid:</b><br>
         <b>Em que ocorre a definição do início de um gráfico direcionado:</b><br><br>
-
-        ```mermaid<br>
+      <div class="code-example">
+        <code>```mermaid<br>
         graph TD;<br>
         A-->B;<br>
         A-->C;<br>
         B-->D;<br>
         C-->D;<br>
-        ```<br><br>
+        ```</code>
+      </div><br>
+
+      <!-- Incluindo a biblioteca Mermaid -->
+      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+        <!--
+    //Inicializando Mermaid após o carregamento da página:
+    mermaid.initialize({
+        startOnLoad: true
+    });
+       -->
+      </script>
+      <pre class="mermaid">
+graph TD;
+A-->B;
+A-->C;
+B-->D;
+C-->D;
+  </pre>
       </p><br><br><br>
 
 
@@ -143,8 +236,8 @@
         delimitado com o identificador de sintaxe geojson ou topojson.<br>
         Exemplo:<br><br>
         Aqui um quadrado sobre a cidade do Rio de Janeiro em GeoJSON:
-
-      <pre>```geojson
+      <div class="code-example">
+      <pre><code>```geojson
 {
     "type": "Feature",
     "properties": {},
@@ -161,7 +254,8 @@
         ]
     }
 }
-```</pre><br><br><br>
+```</code></pre>
+</div><br><br><br>
 
 
       <h3>3. Criação de Objetos 3D:</h3>
@@ -172,8 +266,8 @@
         dentro de um bloco de código cercado com o identificador de sintaxe stl.<br><br>
         Exemplo:<br><br>
         Aqui um modelo 3D de uma pirâmide em STL:
-
-      <pre>```stl
+<div class="code-example">
+      <pre><code>```stl
 solid pyramid
   facet normal 0.0 0.0 1.0
     outer loop
@@ -218,7 +312,8 @@ solid pyramid
     endloop
   endfacet
 endsolid pyramid
-```</pre>
+```</code></pre>
+</div>
       </p><br><br><br>
 
 
@@ -228,34 +323,42 @@ endsolid pyramid
       <p>
         <b>O GitHub suporta expressões matemáticas formatadas em LaTeX usando o MathJax.</b>
         <b>Para usar uma expressão matemática junto com um texto, você tem que
-          usar o símbolo do cifrão ($) ou iniciar a expressão com $` e encerrá-la com `$.</b><br>
-        Exemplo:<br><br>
-        O logaritmo de 32 na base 2 (log<sub>2</sub> 32=5):<br>
-        $\log_2 32 = 5$<br><br>
-
-        A divisão de 5 por 1/2 (5 ÷ 1/2 = 5 x 2 = 10):<br>
-        $` 5 \div \frac{1}{2} = 5 \times 2 = 10 `$<br><br>
+          usar o símbolo do $ (cifrão) ou iniciar a expressão com $` (cifrões acompanhados com acentos
+          graves) e encerrá-la com `$.</b><br>
+          Exemplo:<br><br>
+          <div class="code-example">
+          <code>O logaritmo de 32 na base 2 (log<sub>2</sub> 32 = 5):<br><br>
+          $\log_2 32 = 5$<br><br><br>
+        A divisão de 5 por 1/2 (5 ÷ 1/2 = 5 x 2 = 10):<br><br>
+        $` 5 \div \frac{1}{2} = 5 \times 2 = 10 `$</code>
+      </div><br>
 
         <b>Ou se quiser, pode adicionar a expressão matemática como um bloco, para isso,
-          apenas inicie uma nova linha e delimite a expressão com dois símbolos de dólar $$.</b><br>
+          apenas inicie uma nova linha e delimite a expressão com dois símbolos de $$ (cifrões).</b><br>
         Exemplo:<br><br>
-        O resto de 10 dividido por 3 (10 mod 3 = 1):<br>
-        $$10 \mod 3 = 1$$<br><br><br>
+        <div class="code-example">
+        <code>O resto de 10 dividido por 3 (10 mod 3 = 1):<br><br>
+        $$10 \mod 3 = 1$$</code>
+      </div><br>
 
-        <b>Também é possível usar a sintaxe do bloco de código ```math para exibir uma
+        <b>Também é possível usar a sintaxe do bloco de código (três acentos graves, no início e fim) com o math para exibir uma
           expressão matemática como um bloco.</b><br>
         Exemplo:<br><br>
-        A multiplicação de 6 por 8 (6 x 8 = 48):<br>
-        ```math<br>
-        6 \cdot 8 = 48<br>
-        ```<br><br>
-
-        Dicas:<br>
-        <b>Escape do sinal: Para exibir um cifrão literal, use \ antes do $.<br>
-          Ou coloque o $ entre a tag span.</b><br>
+        <div class="code-example">
+        <code>A multiplicação de 6 por 8 (6 x 8 = 48):<br><br>
+        ```math<br><br>
+        6 \cdot 8 = 48<br><br>
+        ```</code>
+      </div><br><br>
+        <b>OBSERVE:<br>
+        Escape do sinal:<br>
+        Para exibir um $ cifrão literal, use \ (barra invertida)antes do $ (cifrão).<br>
+         Ou coloque o $ (cifrão) entre a tag html span.</b><br>
         Exemplo:<br><br>
-        Aqui o cifrão é exibido como um texto qualquer!<br>
-        &lt; span &gt; $ &lt; /span &gt; \log_2 32 = 5$
+        <div class="code-example">
+        <code>Aqui o cifrão é exibido como um texto qualquer!<br><br>
+        &lt;span&gt; $ &lt;/span&gt; \log_2 32 = 5$</code>
+      </div>
       </p><br><br><br>
 
       <hr>
