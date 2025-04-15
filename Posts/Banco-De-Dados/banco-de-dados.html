@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breno - Banco de Dados</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="icon" href="../../Images/icone-simbolo.jpg" type="image/jpg">
+</head>
+
+<body class="home">
+    <header>
+        <h1>Seja muito bem-vindo</h1>
+        <h3>Ao espaço onde guardo minhas anotações!😊</h3>
+
+        <div class="links">
+            <a href="../../index.html" target="_self">Página Inicial</a>
+            <a href="../../linktree.html" target="_self">LinkTree</a>
+            <a href="../../about.html" target="_self">Sobre</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="post links-normal">
+            <h2>Guia de Banco de Dados</h2>
+            <p>
+                Um <b>banco de dados (BD) é uma estrutura organizada de dados inter-relacionados</b>, projetada para
+                ser armazenada e gerida de forma eficiente por um <b>sistema de gerenciamento de banco de
+                dados (SGBD)</b>. O objetivo principal de um banco de dados é armazenar informações de maneira
+                sistemática, permitindo o acesso, a modificação e a recuperação rápida e eficiente dos dados.<br><br>
+
+                Já os <b>SGBDs, ou Sistemas de Gerenciamento de Bancos de Dados, são softwares projetados para
+                gerenciar, organizar, armazenar e recuperar dados de maneira eficiente e segura.</b>
+                Eles permitem que os usuários interajam com os dados sem precisar se preocupar com os
+                detalhes de armazenamento e gerenciamento, oferecendo uma camada de abstração entre os
+                bancos de dados e os aplicativos ou usuários que os utilizam.<br><br>
+
+                <b>E por serem o software que facilita a criação, o gerenciamento e a manipulação dum
+                banco de dados, possuem e demvem possuir várias funcionalidades para serem classificados como um SGBD,
+                exemplos de algumas dessas funções são:</b><br><br>
+
+                <ol>
+                    <li><b>Modelagem de Dados:</b></li>
+                    Permitem a definição de estruturas de dados, como tabelas, colunas e tipos de dados.<br><br>
+
+                    <li><b>Manipulação de Dados:</b></li>
+                    Oferecem linguagens de consulta, como SQL, para inserir, atualizar, excluir e consultar dados.<br><br>
+
+                    <li><b>Controle de Acesso:</b></li>
+                    Gerenciam permissões para garantir que apenas usuários autorizados possam acessar
+                    ou modificar os dados.<br><br>
+
+                    <li><b>Integridade e Consistência:</b></li>
+                    Mantêm a integridade dos dados através de mecanismos, como chaves estrangeiras e transações.<br><br>
+
+                    <li><b>Backup e Recuperação:</b></li>
+                    Possuem recursos para criar cópias de segurança dos dados e recuperar informações em caso de falhas.<br><br>
+
+                    <li><b>Concorrência</b></li>
+                    Gerenciam o acesso simultâneo de múltiplos usuários para garantir a integridade dos
+                    dados durante operações concorrentes.
+                </ol>
+
+                <b>Bancos de dados são fundamentais para diversas aplicações computacionais, e eles podem ser classificados
+                basicamente em banco de dados relacionais (SQL), e não relacionais (NOSQL).</b>
+            </p><br>
+
+
+            <h2>Bancos de Dados Relacionais (SQL):</h2>
+            <p>
+            <b>Bancos de dados relacionais, também conhecidos como SQL (Structured Query Language), ou Linguagem de Consulta Estruturada,
+            e que tem o intuito de organizar os dados em tabelas estruturizadas</b><br><br>
+            Cada tabela é composta por linhas e colunas, onde as colunas representam os atributos (ou campos) e as linhas representam os
+            registros (ou tuplas). A relação entre as tabelas é estabelecida através de chaves estrangeiras, que são referências a chaves
+            primárias de outras tabelas. Isso permite a criação de consultas complexas que relacionam múltiplas tabelas para extrair informações.<br><br>
+
+            <b>Vantagens do SQL:</b><br>
+            <ol>
+            <li><b>Padronização:</b></li>
+            SQL é uma linguagem padronizada pela indústria, o que facilita a interoperabilidade entre diferentes
+            sistemas de gerenciamento de bancos de dados (SGBDs).<br><br>
+
+            <li><b>Simplicidade de uso:</b></li> A linguagem SQL é relativamente fácil de aprender e usar, especialmente
+            para consultas básicas e manipulação de dados.<br><br>
+
+            <li><b>Desempenho otimizado:</b></li>
+            SQL permite acesso rápido e eficiente aos dados, sendo capaz de recuperar múltiplos registros com comandos simples.<br><br>
+
+            <li><b>Integridade dos dados:</b></li>
+            SQL oferece recursos para garantir a integridade e consistência dos dados nos bancos de dados relacionais.<br><br>
+
+            <li><b>Consultas estruturadas:</b></li>
+            A capacidade de realizar consultas complexas e bem estruturadas, especialmente com o uso de  cláusulas, que facilitam a
+            combinação de dados de várias tabelas.
+            </ol><br><br>
+            
+            <b>Desvantagens do SQL:</b><br>
+            <ol>
+                <li><b>Custo de licenciamento:</b></li>
+                Algumas versões de SGBDs SQL, como o Microsoft SQL Server, podem ter opções de licenciamento caras.<br><br>
+
+                <li><b>Compatibilidade limitada:</b></li>
+                Uns tipos de SQL, por exemplo, é projetado para rodar apenas em servidores baseados no Windows,
+                limitando assim a flexibilidade em ambientes multiplataforma.<br><br>
+
+                <li><b>Rigidez estrutural:</b></li>
+                SQL é baseado em esquemas rígidos, o que pode ser uma desvantagem quando se trabalha com dados não estruturados
+                ou semiestruturados, onde o NoSQL pode oferecer mais flexibilidade.
+            </ol>
+            </p><br>
+
+
+                <h2>Bancos de Dados Não Relacionais (NOSQL):</h2>
+                <p>
+                    <b>Bancos de dados não relacionais, ou NoSQL (Not Only SQL), Não Apenas SQL, surgiram
+                    como uma alternativa aos bancos de dados tradicionais (SQL) para lidar com grandes
+                    volumes de dados e situações onde a flexibilidade na estrutura dos dados é mais
+                    importante do que a consistência e a integridade transacional.</b><br><br>
+
+                    Eles não dependem de tabelas e linhas como estrutura de dados, permitindo armazenar dados de
+                    maneira mais diversificada e menos estruturada.<br><br>
+                    
+                    <b>E são basicamente, qualquer linguagem dos SGBDs, que não sejam baseadas no SQL,
+                    por isso que é chamado de NOSQL (Not Only SQL), Não Apenas SQL.</b><br><br>
+
+                    <b>Vantagens do NoSQL:</b>
+                    <ol>
+                        <li><b>Flexibilidade:</b></li>
+                        Bancos de dados NoSQL permitem armazenar dados com estruturas variáveis, o que
+                        proporciona maior agilidade no desenvolvimento de aplicações que lidam com dados dinâmicos.<br><br>
+
+                        <li><b>Escalabilidade Horizontal:</b></li>
+                        NoSQL é frequentemente escolhido por sua capacidade de escalar horizontalmente, distribuindo
+                        dados por vários servidores para lidar com cargas de trabalho muito grandes.<br><br>
+
+                        <li><b>Desempenho:</b></li>
+                        Em muitos casos, especialmente com grandes volumes de dados e operações de
+                        leitura / escrita intensivas, os bancos de dados NoSQL podem oferecer melhor
+                        desempenho do que os bancos de dados relacionais.<br><br>
+
+                        <li><b>Suporte a Dados Não Estruturados:</b></li>
+                        NoSQL é ideal para armazenar dados que não se encaixam bem em tabelas,
+                        como documentos JSON, pares chave-valor, grafos ou colunas de dados variáveis.<br><br>
+
+                        <li><b>Modelagem de Dados:</b></li>
+                        Permite a modelagem de dados mais próxima da forma como os desenvolvedores
+                        pensam e estruturam suas aplicações, reduzindo a necessidade de abstrações e
+                        conversões.
+                    </ol><br><br>
+ 
+                    <b>Desvantagens do NoSQL:</b>
+                    <ol>
+                        <li><b>Falta de Padrão:</b></li>
+                        Ao contrário do SQL, não há um padrão universal para a linguagem de consulta
+                        em NoSQL, o que pode levar a uma curva de aprendizado mais acentuada e a problemas
+                        de interoperabilidade.<br><br>
+
+                        <li><b>Integridade dos Dados:</b></li>
+                        Muitos sistemas NoSQL relaxam as restrições de integridade referencial que são
+                        comuns em bancos de dados SQL, o que pode dificultar a manutenção da consistência
+                        dos dados.<br><br>
+
+                        <li><b>Complexidade de Consultas:</b></li>
+                        Realizar consultas complexas, especialmente aquelas que envolvem junções de
+                        múltiplas tabelas ou coleções, pode ser mais difícil e menos eficiente em NoSQL.<br><br>
+
+                        <li><b>Maturidade:</b></li>
+                        Alguns bancos de dados NoSQL são relativamente novos e podem não ter a
+                        mesma maturidade e quantidade de recursos que os SGBDs relacionais estabelecidos.<br><br>
+
+                        <li><b>ACID:</b></li>
+                        Muitos bancos de dados NoSQL não oferecem suporte completo às propriedades
+                        ACID (Atomicidade, Consistência, Isolamento e Durabilidade), o que pode ser uma
+                        limitação crítica para aplicações que exigem transações altamente confiáveis.
+                    </ol><br><br>
+
+                    <b>OBSERVE:<br><br>
+                    NoSQL não é uma substituição direta para SQL, mas sim uma alternativa que é mais adequada
+                    para certos tipos de requisitos. A escolha entre SQL e NoSQL deve ser feita com base nas
+                    necessidades específicas do projeto, como a estrutura dos dados, a escala desejada,
+                    os requisitos de transação etc.</b>
+                </p>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright (©) 2025 Breno Ariel</p>
+    </footer>
+</body>
+
+</html>
