@@ -168,9 +168,22 @@ body.home {
     color: rgb(0, 255, 0);
     font-family: serif;
     text-decoration: none;
-    font-size: auto;
+    font-size: clamp(1rem, 2vw, 5rem);
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+/* Formatação dos "EXEMPLOS DE IMAGENS"
+*/
+.home .image-example {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    max-width: 0.05rem;
+    font-size: 0.05vw;
 }

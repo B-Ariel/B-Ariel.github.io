@@ -12,7 +12,7 @@
 <body class="home">
     <script></script>
     <header>
-        <h1>Seja muito bem-vindo</h1>
+        <h1>Seja muito bem-vindo(a)</h1>
         <h3>Ao espaço onde guardo minhas anotações!😊</h3>
         <div class="links">
             <a href="../../index.html" target="_self">Página Inicial</a>
@@ -66,7 +66,7 @@
                     espaço e do
                     texto do
                     título.
-                    O número de símbolos # (hash) indica o nível do título</b><br><br>
+                    O número de símbolos # (cerquilha / hash) indica o nível do título</b><br><br>
                 Exemplo:<br>
             <div class="code-example">
                 <code># Título H1 <br>
@@ -106,7 +106,7 @@
             </div><br><br>
 
             <b>Itálico:<br>
-                Envolva o texto com um *(asterisco) ou um _ (sublinhado).</b><br><br>
+                Envolva o texto com um * (asterisco) ou um _ (sublinhado).</b><br><br>
             Exemplo:<br>
             <div class="code-example">
                 <code>*texto em itálico* ou _texto em itálico_</code>
@@ -126,7 +126,7 @@
             </div><br><br>
 
             <b>Subscrito:<br>
-                Use as tags html &lt;sub&gt; texto &lt;/sub&gt;.</b><br><br>
+                Use a sintaxe html: &lt;sub&gt; texto... &lt;/sub&gt;.</b><br><br>
             Exemplo:<br>
             <div class="code-example">
                 <code>Isso aqui está subscrito: &lt;sub&gt; texto subscrito &lt;/sub&gt;</code>
@@ -136,7 +136,7 @@
             </div><br><br>
 
             <b>Sobrescrito:<br>
-                Use as tags html &lt;sup&gt; texto &lt;/sup&gt;.</b><br><br>
+                Use a sintaxe html: &lt;sup&gt; texto... &lt;/sup&gt;.</b><br><br>
             Exemplo:<br>
             <div class="code-example">
                 <code>Isso aqui está sobrescrito: &lt;sup&gt; texto sobrescrito &lt;/sup&gt;</code>
@@ -146,7 +146,7 @@
             </div><br><br>
 
             <b>Sublinhado:<br>
-                Use as tags html &lt;ins&gt; texto &lt;/ins&gt;.</b><br><br>
+                Use a sintaxe html: &lt;ins&gt; texto... &lt;/ins&gt;.</b><br><br>
             Exemplo:<br>
             <div class="code-example">
                 <code>Isso aqui está sublinhado: &lt;ins&gt; texto sublinhado &lt;/ins&gt;</code>
@@ -184,7 +184,7 @@
             <h3>4. Bloco de Código:</h3>
             <p>
                 <b>Código em linha:<br>
-                    Envolva o código com `(acento grave).</b><br><br>
+                    Envolva o código com ` (acento grave).</b><br><br>
                 Exemplo:<br>
             <div class="code-example">
                 <code>`console.log("Olá, mundo!");`</code>
@@ -195,7 +195,7 @@
             </div><br><br>
 
             <b>Blocos de código:<br>
-                Envolva o bloco de código com três ```(acentos graves).<br>
+                Envolva o bloco de código com três ``` (acentos graves).<br>
                 Você pode especificar a linguagem de programação após as três crases iniciais para habilitar o
                 realce de sintaxe.</b><br><br>
             Exemplo:<br>
@@ -212,7 +212,7 @@
 
             <h3>5. Cores:</h3>
             <p>
-                <b>Envolva o código de cor (HEX, RGB ou HSL) com `(acento grave).<br>
+                <b>Envolva o código de cor (HEX, RGB ou HSL) com ` (acento grave).<br>
                     O GitHub exibirá uma pequena amostra da cor ao lado do código.</b><br><br>
                 Exemplos:<br>
             <div class="code-example">
@@ -230,7 +230,7 @@
             <h3>1. Links:</h3>
             <p>
                 <b>Links embutidos:<br>
-                    Use a sintaxe [texto do link](URL).</b><br><br>
+                    Use a sintaxe: [texto do link](URL).</b><br><br>
                 Exemplo:<br>
             <div class="code-example">
                 <code>Para ir para a Página inicial: [Clique aqui](https://b-ariel.github.io)</code>
@@ -240,7 +240,8 @@
             </div><br><br>
 
             <b>Links de seção:<br>
-                Use #nome-da-seção, onde "nome-da-seção" é o texto do título da seção (com espaços substituídos por
+                Use: #nome-da-seção<br>
+                Onde "nome-da-seção" é o texto do título da seção (com espaços substituídos por
                 - (hífens / traços) e letras minúsculas).</b><br><br>
             Exemplo:<br>
             <div class="code-example">
@@ -254,7 +255,7 @@
                 O github cria essas âncoras automaticamente.</b><br><br>
 
             <b>Links relativos:<br>
-                Use [texto](caminho/para/arquivo) para criar links para outros arquivos no mesmo
+                Use: [texto](caminho/para/arquivo) para criar links para outros arquivos no mesmo
                 repositório.</b><br><br>
             Exemplo:<br>
             <div class="code-example">
@@ -267,14 +268,15 @@
                     Use esse link para ver: <a href="../../index.html" target="_self">a página inicial</a></code>
             </div>
             <b>OBSERVE:<br>
-                O texto do link deve estar em uma única linha, e usar a /(barra), pois é um link
+                O texto do link deve estar em uma única linha, e usar a / (barra), pois é um link
                 relativo</b><br><br><br>
 
             <b>Âncoras personalizadas:
                 <br>
-                Use tags HTML &lt;a name="nome"&gt;&lt;/a&gt; para criar âncoras personalizadas dentro do
-                documento.<br>
-                Em seguida, use [texto](#nome) para criar um link para essa âncora.</b><br><br>
+                Use tags HTML para ancorar: &lt;a name="nome"&gt;&lt;/a&gt;<br>
+                Para assim criar âncoras personalizadas dentro do documento.<br>
+                Em seguida, use: [texto](#nome)<br>
+                Isso cria um link para essa âncora.</b><br><br>
             Exemplo:<br>
             <div class="code-example">
                 <code>&lt;a name="basic-text-formatting"&gt;&lt;/a&gt;<br><br>
@@ -292,22 +294,19 @@
 
             <h3>2. Imagens:</h3>
             <p>
-                <b>Use a sintaxe ![texto alternativo](URL da imagem).</b><br><br>
+                <b>Use a sintaxe: ![texto alternativo](URL da imagem)</b><br><br>
                 <b>"texto alternativo"</b> é uma descrição da imagem para acessibilidade.<br>
-                O GitHub suporta URLs de imagens externas e links relativos para imagens no mesmo repositório.<br><br>
+                E o GitHub suporta URLs de imagens externas e links relativos para imagens no mesmo repositório.<br><br>
                 Exemplo:<br>
             <div class="code-example">
                 <code>![meus dogs](../Images/pingo-and-valente(pinscher-and-akita).jpg)<br><br>
                     ![minha outra dog](Main/Images/princesa-the-pinscher.jpg)</code>
             </div><br>
-            <div
-                style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; margin-left: auto;">
-                <img src="../../Images/pingo-and-valente(pinscher-and-akita)-1.jpg" alt="meus dogs" width="230"
-                    height="auto">
+            <div class="#">
+                <img src="../../Images/pingo-and-valente(pinscher-and-akita)-1.jpg" alt="meus dogs">
             </div><br>
-            <div
-                style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; margin-left:auto;">
-                <img src="../../Images/princesa-the-pinscher.jpg" alt="minha outra dog" width="230" height="auto">
+            <div class="#">
+                <img src="../../Images/princesa-the-pinscher.jpg" alt="minha outra dog">
             </div><br><br>
 
             <b>OBSERVE:<br>
@@ -317,7 +316,7 @@
 
             <h3>3. Emojis:</h3>
             <p>
-                <b>Digite :(dois-pontos) seguido do código do emoji.</b><br><br>
+                <b>Digite : (dois-pontos) seguido do código do emoji.</b><br><br>
                 Exemplo:<br>
             <div class="code-example">
                 <code>:smile: :laughing: :blush:<br>
@@ -491,8 +490,10 @@
             <h3>4. Notas de Rodapé:</h3>
             <p>
                 <b>Como usar:<br>
-                    Use essa sintaxe [^numero] para criar a referência da nota de rodapé no texto.<br><br>
-                    Use essa sintaxe [^numero]: texto da nota para definir o conteúdo da nota de rodapé.</b><br><br>
+                    Use essa sintaxe: [^numero]<br>
+                    Para assim criar a referência da nota de rodapé no texto.<br><br>
+                    Depois use a mesma sintaxe: [^numero]<br>
+                    Para assim no texto da nota, definir o conteúdo desta mesma nota.</b><br><br>
                 Exemplo:<br>
             <div class="code-example">
                 <code>&lt;!-- As duas primeiras linhas ficam no texto normal,<br>e as duas ultimas são
@@ -527,7 +528,8 @@
 
             <h3>2. Alertas:</h3>
             <p>
-                <b>Use essa sintaxe > [!TIPO] para criar alertas, onde "TIPO" pode ser NOTE, TIP, IMPORTANT, WARNING ou
+                <b>Use essa sintaxe: > [!TIPO]<br>
+                    Isso cria alertas, onde "TIPO" pode ser NOTE, TIP, IMPORTANT, WARNING ou
                     CAUTION.</b><br><br>
                 Exemplo:<br>
             <div class="code-example">
@@ -548,7 +550,7 @@
 
             <h3>3. Ocultar Conteúdo (comentar):</h3>
             <p>
-                <b>Envolva o conteúdo que você deseja ocultar com comentários HTML.</b><br><br>
+                <b>Envolva o conteúdo que você deseja ocultar com comentários HTML: &lt;!-- Texto... --&gt;</b><br><br>
                 Exemplo:<br>
             <div class="code-example">
                 <code>&lt; !-- Isso é um comentário: Este texto não será exibido na renderização da página,
@@ -577,7 +579,7 @@
 
 
             <hr>
-            <p><b>EM CASOS DE DÚVIDA, SEMPRE BUSCAR A DOCUEMNTAÇÃO OFICIAL NO GITHUB!</b></p>
+            <p><b>EM CASOS DE DÚVIDA, SEMPRE BUSCAR A DOCUEMNTAÇÃO OFICIAL!</b></p>
         </div>
     </div>
 
