@@ -88,7 +88,7 @@ body.home {
 .home .post {
     background: rgb(240, 240, 200);
     padding: 20px;
-    margin: 20px;
+    margin: 7px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgb(0, 0, 0);
 }
@@ -102,6 +102,8 @@ body.home {
     margin-top: 20px;
 }
 
+/* Formatação dos "LINKS IMPORTANTES"
+*/
 .home .links {
     display: flex;
     flex-wrap: wrap;
@@ -125,6 +127,8 @@ body.home {
     color: rgb(0, 0, 0);
 }
 
+/* Formatação dos "LINKS DAS POSTAGENS"
+*/
 .home .links-post {
     display: flex;
     flex-wrap: wrap;
@@ -184,6 +188,6 @@ body.home {
     flex-wrap: wrap;
     margin: 0.1rem;
     padding: 0.1rem;
-    max-width: 0.05rem;
-    font-size: 0.05vw;
+    max-width: 100%;
+    font-size: 1rem;
 }
