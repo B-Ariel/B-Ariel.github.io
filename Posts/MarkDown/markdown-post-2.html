@@ -23,9 +23,14 @@
   <div class="container">
     <div class="post">
       <h2>Guia de MarkDown - Parte 2</h2>
+
       <div class="links-post">
-        <a href="markdown-post-1.html">Parte 1</a>
-        <a href="markdown-post-2.html">Parte 2</a>
+        <div class="links-post-no-selected">
+          <a href="markdown-post-1.html">Parte 1</a>
+        </div>
+        <div class="links-post-selected">
+          <a href="markdown-post-2.html">Parte 2</a>
+        </div>
       </div>
 
       <p>
@@ -35,7 +40,7 @@
         olhada para aproveitar ao máximo este guia!
       </p>
       <p> Um <b>Guia de Markdown - INTERMEDIÁRIO</b> que fará você sobreviver no GitHub,
-        e que, nesta  segunda parte, abordará estes temas:
+        e que, nesta segunda parte, abordará estes temas:
       </p>
       <ul class="links-normal">
         <li><b><a href="#tables">Tabelas:</a></b> Criação de tabelas, formatação e alinhamento de texto.</li> <br>
@@ -87,30 +92,30 @@
         Exemplo:<br>
       <div class="code-example">
         <pre><code>
-| Comandos do prompt de comando | Descrição |
+| CMD | Descrição |
 | --- | --- |
-| `cls` | *Limpa* a tela. |
-| `mkdir` | **Cria** uma Pasta. |
-| `color` | *Configura as cores.* |
+| `cls` | *Limpa* a tela |
+| `mkdir` | **Cria** Pastas |
+| `color` | *Muda cores* |
         </code></pre>
       </div><br>
       <div class="code-example">
         <code><table border="1" cellpadding="5" cellspacing="5">
           <tr>
-            <th>Comandos do prompt de comando</th>
+            <th>CMD</th>
             <th>Descrição</th>
           </tr>
           <tr>
             <td>cls</td>
-            <td>Limpa a tela.</td>
+            <td>Limpa a tela</td>
           </tr>
           <tr>
             <td>mkdir</td>
-            <td><b>Cria</b> uma Pasta.</td>
+            <td><b>Cria</b> Pastas</td>
           </tr>
           <tr>
             <td>color</td>
-            <td>Configura as cores.</td>
+            <td>Muda cores</td>
           </tr>
         </code></table>
       </div>
@@ -124,34 +129,34 @@
         Exemplo:<br>
       <div class="code-example">
         <pre><code>
-| Na Esquerda | No Centro | Na Direita   |
-| :---        |   :---:   |         ---: |
-| Nome:Red    | #FF0000   | rgb(255,0,0) |
-| Nome:Green  | #00FF00   | rgb(0,255,0) |
-| Nome:Blue   | #0000FF   | rgb(0,0,255) |
+| Esquerda | Centro | Direita |
+| :--- | :---: | ---: |
+| rgb(255,0,0) | #FF0000 | red |
+| rgb(0,255,0) | #00FF00 | green |
+| rgb(0,0,255) | #0000FF | blue |
             </code></pre>
       </div><br>
       <div class="code-example">
         <code><table border="1" cellpadding="5" cellspacing="5">
           <tr>
-            <th>Na Esquerda</th>
-            <th>No Centro</th>
-            <th>Na Direita</th>
+            <th>Esquerda</th>
+            <th>Centro</th>
+            <th>Direita</th>
           </tr>
           <tr>
-            <td>Nome:Red</td>
-            <td>#FF0000</td>
             <td>rgb(255,0,0)</td>
+            <td>#FF0000</td>
+            <td>red</td>
           </tr>
           <tr>
-            <td>Nome:Green</td>
-            <td>#00FF00</td>
             <td>rgb(0,255,0)</td>
+            <td>#00FF00</td>
+            <td>green</td>
           </tr>
           <tr>
-            <td>Nome:Blue</td>
-            <td>#0000FF</td>
             <td>rgb(0,0,255)</td>
+            <td>#0000FF</td>
+            <td>blue</td>
           </tr>
         </code></table>
       </div>
@@ -249,10 +254,11 @@
       </div><br>
       <div class="image-example">
         <picture>
-          <source media="(max-width: 600px)" srcset="../../Images/little-square-over-the-city-of-rio-de-janeiro-in-geojson.jpg">
+          <source media="(max-width: 600px)"
+            srcset="../../Images/little-square-over-the-city-of-rio-de-janeiro-in-geojson.jpg">
           <img src="../../Images/square-over-the-city-of-rio-de-janeiro-in-geojson.jpg"
             alt="quadrado sobre a cidade do Rio de Janeiro em GeoJSON">
-          </picture>
+        </picture>
       </div><br><br><br>
 
 
