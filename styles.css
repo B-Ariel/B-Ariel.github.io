@@ -189,11 +189,25 @@ body.home {
     color: rgb(0, 255, 0);
     font-family: serif;
     text-decoration: none;
-    font-size: clamp(0.5rem, 0.9rem, 2rem);
+    font-size: clamp(0.5rem, 1rem, 2rem);
     padding: 5px;
     margin: 1px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0,0);
+}
+
+@media (max-width: 500px) {
+  .home .code-example {
+    background: rgb(0, 0, 0);
+    color: rgb(0, 255, 0);
+    font-family: serif;
+    text-decoration: none;
+    font-size: clamp(0.5rem, 0.7rem, 1rem);
+    padding: 5px;
+    margin: 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0,0);
+  }
 }
 
 /* Formatação dos "EXEMPLOS DE IMAGENS"
