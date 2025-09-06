@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breno - BANCO DE DADOS - MYSQL</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="icon" href="../../../Images/icone-simbolo.jpg" type="image/jpg">
+</head>
+
+<body class="home">
+    <header>
+        <h1>Seja muito bem-vindo(a)</h1>
+        <h3>Ao espaço onde guardo minhas anotações!😊</h3>
+
+        <div class="links">
+            <a href="../../../index.html" target="_self">Página inicial</a>
+            <a href="../../../my-links.html" target="_self">Árvore de links</a>
+            <a href="../../../about.html" target="_self">Sobre</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="post">
+            <h2>Guia de BANCO DE DADOS:</h2>
+            <div class="links-post links-post-no-selected">
+                <a href="../banco-de-dados-post-1.html" target="_self">Guia de BD</a>
+                <a href="mysql-post-1.html" target="_self">MYSQL - Página principal</a>
+            </div>
+
+            <h3>Estrutura da linguagem do MYSQL:</h3>
+            <p>
+            <ul class="links-normal">
+                <li><b><a href="#literal-values">Valores literais:</a></b> Cadeia de caracteres, numéricos, data e hora</li>
+            </ul>
+            </p><br>
+
+            <hr>
+            <h1>Estrutura da linguagem:</h1>
+            <h2 id="literal-values">Os valores literais:</h2>
+            <p>
+                <b>Valores literais no MySQL são os valores fixos que você escreve diretamente nele,
+                    sem depender de nada externo, já que esses valores foram programados diretamente no código
+                    fonte.</b>
+            </p>
+
+            <p>
+                <hr>
+            <h3>Cadeia De Caracteres (Strings):</h3>
+            <b>É uma sequência de bytes ou caracteres, entre '(aspas simples) ou "(aspas duplas).</b><br><br>
+            Exemplo:<br>
+            <div class="code-example">
+                <code>'Aqui um texto'<br>
+                        "Outro texto"</code>
+            </div><br><br>
+            <b>As cadeias de aspas colocadas uma ao lado da outra são concatenadas em um corda única.</b><br><br>
+            Exemplo:<br>
+            <div class="code-example">
+                <code>'Mesma coisa'<br>
+                        'Mesma' ' ' 'coisa'</code>
+            </div><br><br>
+
+            <b>OBSERVE:<br>
+                Uma de cadeia de string pode ter um conjunto de opcional de caracteres,
+                para designar qual conjunto de caracteres específicos usar: [_charset_name]'Texto...' [COLLATE
+                collation_name]</b><br>
+            <ul>
+                <li><b>[_charset_name]:</b></li>
+                Isso define como os bytes da string são interpretados, tipo qual charset (character set), conjunto de
+                caracteres, escolher.<br><br>
+                <li><b>'Texto...':</b></li>
+                O próprio texto.<br><br>
+                <li><b>[COLLATE collation_name]:</b></li>
+                Isso define como strings são comparadas e ordenadas dentro do charset (character set), conjunto de
+                caracteres.
+            </ul>
+            Exemplo:<br>
+            <div class="code-example">
+                <code>SELECT _latin1'Texto aqui...';<br>
+                    SELECT _binary'Texto aqui...';<br>
+                    SELECT _utf8mb4'Texto aqui...' COLLATE utf8mb4_danish_ci;</code>
+            </div><br><br>
+
+            <b>OBSERVE:<br>
+                Antes da string, pode se usar a marcação de que a string é Unicode.<br>
+                A letra N que vem de "National", garante que a string irá vir com o padrão de Unicode,
+                UTF-8.</b><br><br>
+            Exemplo:<br>
+            <div class="code-example">
+                <code>Os três são as mesmas coisas, já que no SQL, ele ignora case (case-insensitive),
+                não diferencia maiúsculas de minúsculas.<br><br>
+                SELECT N'Texto aqui...';<br>
+                    SELECT n'Texto aqui...';<br>
+                    SELECT _utf8'Texto aqui...';</code>
+            </div><br><br>
+
+            <b>OBSERVE:<br>
+                Dentro de uma string, certas sequências têm um significado especial,
+                e cada uma dessas sequências começa com uma \ (barra invertida),
+                formando assim a fuga personagem.</b><br><br>
+            Exemplo:<br>
+            <div class="code-example">
+                <code><table border="1" cellpadding="5" cellspacing="5">
+                    <tr>
+                        <th><b>Sequência:</b></th>
+                        <th><b>Representa:</b></th>
+                    </tr>
+                    <tr>
+                        <td>\0</td>
+                        <td>Caractere NUL, Byte zero (X'00'), usado pra dizer “fim de string” em C</td>
+                     </tr>
+                     <tr>
+                        <td>\'</td>
+                        <td>Escape literal de ' (aspas simples)</td>
+                     </tr>
+                     <tr>
+                        <td>\"</td>
+                        <td>Escape literal de " (aspas duplas)</td>
+                     </tr>
+                     <tr>
+                        <td>\b</td>
+                        <td>No terminal, apaga o anterior, backspace, retrocesso</td>
+                     </tr>
+                     <tr>
+                        <td>\n</td>
+                        <td>Line feed (LF), Alimentação de Linha. Pula pra próxima linha</td>
+                     </tr>
+                     <tr>
+                        <td>\r</td>
+                        <td>Carriage Return (Retorno de carro), retorna pro início da linha (tipo "overwrite", sobrescrever), formatação cross-platform, multiplataforma</td>
+                     </tr>
+                     <tr>
+                        <td>\t</td>
+                        <td>Tabulação, um tab normal</td>
+                     </tr>
+                     <tr>
+                        <td>\Z</td>
+                        <td>ASCII 26 (Ctrl+Z), marca de fim de arquivo em Windows. Para a leitura de arquivo no Windows, causa bug em LOAD DATA</td>
+                     </tr>
+                     <tr>
+                        <td>\\</td>
+                        <td>Escape literal da \ (barra invertida)</td>
+                     </tr>
+                     <tr>
+                        <td>\%</td>
+                        <td>Escape literal do % (percentual)</td>
+                     </tr>
+                     <tr>
+                        <td>\_</td>
+                        <td>Escape literal de _ (sublinhado)</td>
+                     </tr>
+                    </table></code>
+            </div><br>
+
+            <b>OBSERVE:<br>
+                Para todos outras sequências de escape, a barra invertida é ignorada!</b>
+            </p><br><br><br>
+
+            <hr>
+            <h3>Numéricos:</h3>
+            <p>
+                <b>Literais numéricos podem ser exatos (inteiros e decimais) ou aproximados (ponto flutuante).<br><br>
+                    Os números de valor exato, têm uma parte inteira, fracionária ou ambas, e são usados quando precisão
+                    é crucial,
+                    e podem ser assinados (ser positivo ou negativo). O DECIMAL (também chamado de NUMERIC, DEC, ou
+                    FIXED)
+                    é um tipo de ponto fixo, ou seja, são usados para manter a precisão exata.</b><br><br>
+
+                Eles podem ser assim, 1, 2, 3, 4, 5, 7-3, 4+2...<br>
+                Ou assim, 1.1, 2.3, 3.4...<br><br>
+
+                <b>Os numéricos de valor aproximado, são representados em notação ciêntifica, com uma mantissa
+                    (coeficiente) e expoente,
+                    e são usados quando a precisão não é tão importante, e podem ser assinados (ser positivo ou
+                    negativo).
+                    São os FLOAT e DOUBLE (também chamados de DOUBLE PRECISION e REAL) e esses são os tipos de ponto
+                    flutuante </b><br><br>
+
+                Eles podem ser assim, 1, 2E31, 5E-7-2, 9E785...<br><br>
+
+                <b>OBSERVE:<br>
+                    Mesmo que dois números parecerem semelhantes, eles podem ser tratados de formas diferentes,
+                    tudo depenedrá se esse número for um valor exato ou aproximado.</b><br><br>
+            </p><br><br><br>
+
+            <hr>
+            <h3>Data e hora:</h3>
+            <h4>Padrões aceitos aqui:</h4>
+            <p><b>A data e a hora não seguem apenas um tipo de formato, como por exemplo, podem ser
+                    representadas como caracteres (string) ou em números. Porém é aconselhável seguir os padrões da
+                    MYSQL e ISO
+                    (INTERNATIONAL ORGANIZATION FOR STANDARDIZATION), ORGANIZAÇÃO INTERNACIONAL DE
+                    NORMALIZAÇÃO:</b><br><br>
+            <div class="code-example">
+                <code>Para data (DATE): AAAA-MM-DD (2025-05-01)<br>
+                Para hora (TIME): hh:mm:ss (22:09:30)<br>
+                Para carimbo de data / hora (TIMESTAMP): AAAA-MM-DDThh:mm:ss (2025-05-01T22:09:30)<code>
+                </div><br><br>
+
+                <b>Note também que, como o MYSQL é um BD, ele também segue os padrões do ODBC (OPEN DATABASE
+                    CONNECTIVITY), CONECTIVIDADE DE BANCO DE DADOS ABERTO,
+                    e que é um padrão da MICROSOFT pra conectar aplicações com diferentes BD, aos quais são:</b><br><br>
+                    <div class="code-example">
+                <code>Para data (DATE): {d '2025-05-01'}<br>
+                Para hora (TIME): {t '22:09:30'}<br>
+                Para carimbo de data / hora (TIMESTAMP): {ts '2025-05-01 22:09:30'}</code>
+            </div><br><br>
+
+            <b>Note também que o MYSQL aceita tranquilamente formato padrão do SQL, mas diferente dele, no MYSQL não
+                é obrigado a declarar o tipo antes, que no SQL são:</b><br><br>
+            <div class="code-example">
+                <code>Para data (DATE): DATE '2025-05-01'<br>
+                Para hora (TIME): TIME '2025-05-01'<br>
+                Para carimbo de data / hora (TIMESTAMP): TIMESTAMP '2025-05-01 22:09:30'</code>
+            </div><br><br>
+
+            <h4>Coisas importantes e algumas dicas:</h4>
+            <b>OBSERVE:<br>
+                Repare que o TIMESTAMP, pode ser separado por um espaço ou por um T (T de Time, Tempo).</b><br><br>
+
+            <b>OBSERVE:<br>
+                O MYSQL pode aceitar outros valores para a data e hora como: AAAAMMDD, AA-MM-DD, AAMMDD,
+                hhmmss, hms, h:m, ms, s, DD hh:mm:ss.</b><br><br>
+            <div class="code-example">
+                <code>Eles podem ser assim:<br><br>
+                        20250501     - 2025-05-01<br><br>
+                        "25-05-01"   - 2025-05-01<br><br>
+                        250501       - 2025-05-01<br><br>
+                        220930       - 22:09:30<br><br>
+                        832          - 08:03:02<br><br>
+                        "8:3"        - 08:03:00<br><br>
+                        3020         - 00:30:20<br><br>
+                        20           - 00:00:20<br><br>
+                        "5 12:00:00" -132:00:00<br>
+                        (5 dias × 24h + 12h = 132 horas)<br><br>
+                        '10:70:80'   - 11:11:20<br>
+                        (10h + 70min (1h 10min) +80s (1min 20s) = 11h 12min 20s)<br><br>
+                        -123456	- -12:34:56<br>
+                        Aceita negativo também
+...</code>
+            </div><br><br>
+
+            <b>OBSERVE:<br>
+                Se usar a data / hora como número, de atenção para isso, pois irá facilitar a sua vida,
+                e impedir algum erro posteriormente: se lembre que a hora sempre será no padrão 24h no MYSQL,
+                e como o MYSQL é bem flexível, pode aceitar muitos valores (desde negativos, a dias, horas, minutos,
+                etc) convertidos<br><br>
+
+                Note também se está dentro desses limites, porque assim será mais fácil trabalhar com as numerações, 6,
+                8, 12 ou 14 dígitos no total.<br><br>
+                Isso sem contar com as frações de segundo, já que o MYSQL, pode suportar um total de 6
+                dígitos após o ponto na contagem dos segundos: 22:09:30.123456</b><br><br>
+            <div class="code-example">
+                <code>Eles podem ser assim:<br>
+                6 dígitos: 250501 (2025-05-01) / 220930 (22:09:30)<br>
+                8 dígitos: 20250501 (2025-05-01)<br>
+                12 dígitos: 250501220930 (2025-05-01 22:09:30)<br>
+                14 dígitos: 20250501220930 (2025-05-01 22:09:30)</code>
+            </div><br><br>
+
+            <b>OBSERVE:<br>
+                A data e a hora, nos formatos de caracteres (string), podem aceitar e funcionar com qualquer
+                caractere não padrão (!, @, ^, \n, espaços a mais, etc) como delimitador, porém, será transmitido um
+                aviso (warning).</b><br><br>
+            Eles podem ser assim, '2025/05/01', '2025^05^01', '2025@05@01', '2025 05 01', '2025-05-01
+            22&09&30'...<br><br>
+
+            <h4>Fusos horários:</h4>
+            Antes de tudo, tenha em mente isso a respeito de data / hora no MYSQL:
+            <b>O TIMESTAMP possui funções diferentes a respeito do DATETIME.</b><br><br>
+            <ul>
+                <li><b>Sendo que o IMESTAMP tem a função de converter o fuso, e não guardar,
+                        basicamente, serve para as coisas que mudam constantemente de lugar,
+                        tipo a hora do login em algum sistema.</b>
+                </li><br>
+                <li>
+                    <b>Já o DATETIME, ignora por completo o fuso, e nem converte nada,
+                        servindo basicamente para armazenar datas fixas, tipo numa agenda de algum evento.</b>
+                </li>
+            </ul>
+
+            <b>Com isso já em mente, preste atenção nessa estrutura do MYSQL:</b><br>
+            <div class="code-example">
+                <code>'2025-05-01 22:09:30-03:00'</code>
+            </div><br>
+            <b>Isso significa que a data / hora foi registrada no fuso UTC -03:00 (ex: BRASIL). O MySQL com isso
+                vai:</b><br><br>
+            <ul>
+                <li>
+                    <b>converter pro fuso horário configurado da sessão, apenas se o tipo for TIMESTAMP, se for
+                        DATETIME, ele ignorar o fuso.</b><br><br>
+                </li>
+            </ul>
+
+            <b>Note também que, mesmo o MYSQL, sendo bem flexível, ele ainda tem suas proibições,
+                que no caso, é a estrutura rígida na criação de fusos horários, como por exemplo:</b><br><br>
+            <ul>
+                <li><b>Não pode ter espaços antes do fuso (nesse caso é o -03:00):</b></li>
+                        '2025-05-01 22:09:30 -03:00' -> ISSO ESTÁ ERRADO!<br>
+                        '2025-05-01 22:09:30-03:00' -> ISSO ESTÁ CERTO!<br><br>
+
+                <li><b>Não pode ter zona nomeada aqui:</b></li>
+                        '2025-05-01 22:09:30 America/rio_de_janeiro' -> ISSO ESTÁ ERRADO!<br>
+                        '2025-05-01 22:09:30 -03:00' -> ISSO ESTÁ CERTO!<br><br>
+            </ul>
+            </p>
+
+            <hr>
+            <p><b>EM CASOS DE DÚVIDA, SEMPRE BUSCAR A DOCUMENTAÇÃOOFICIAL!</b></p>
+        </div>
+    </div>
+    <footer>
+        <p>MIT License Copyright (©) 2025 Breno Ariel</p>
+    </footer>
+</body>
+
+</html>
