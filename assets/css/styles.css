@@ -2,15 +2,15 @@
 */
 @font-face {
   font-family: "Gloria_Hallelujah";
-  src: url("../fonts/gloria_hallelujah/gloria-hallelujah-regular.ttf") format("truetype");
+  src: url("/assets/fonts/gloria_hallelujah/gloria-hallelujah-regular.ttf") format("truetype");
 }
 @font-face {
     font-family: "Patrick_Hand";
-    src: url("../fonts/patrick_hand/patrick-hand-regular.ttf") format("truetype");
+    src: url("/assets/fonts/patrick_hand/patrick-hand-regular.ttf") format("truetype");
 }
 @font-face {
     font-family: "Comic_Neue";
-    src: url("../fonts/comic_neue/comic-neue-regular.ttf") format("truetype");
+    src: url("/assets/fonts/comic_neue/comic-neue-regular.ttf") format("truetype");
 }
 
 /*CSS da página: my-links
@@ -368,4 +368,5 @@ body h1,h2,h3,h4,h5,h6 {
 .details-bottom:hover,
 .details-bottom[open]:hover {
     border-color: rgb(0, 0, 255);
+
 }
