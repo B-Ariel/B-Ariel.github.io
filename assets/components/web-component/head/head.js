@@ -1,6 +1,6 @@
 // Ponto de partida para endereços
 const base = document.createElement("base");
-base.href ="https://b-ariel.github.io/";
+base.href ="http://127.0.0.1:5500/";
 document.head.appendChild(base);
 
 // Linkagem do CSS

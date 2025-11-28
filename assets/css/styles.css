@@ -30,17 +30,17 @@ body.my-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 80%;
 }
 
 .my-links .container {
     text-align: center;
     background: rgba(255, 255, 255, 0.5);
-    padding: 5vw;
-    border-radius: 5vw;
-    box-shadow: 0 2vw 5vw rgb(0, 0, 0);
-    max-width: 100rem;
-    width: 80%;
+    padding: clamp(1rem, 5vw, 3rem);
+    border-radius: clamp(0.5rem, 5vw, 3rem);
+    box-shadow: 0 clamp(0.2rem, 2vw, 1rem) clamp(0.5rem, 5vw, 3rem) rgb(0, 0, 0);
+    max-width: 80%;
+    width: auto;
 }
 
 .my-links .profile img {
@@ -56,16 +56,16 @@ body.my-links {
 .my-links .container h4,
 .my-links .container h5,
 .my-links .container h6 {
-    font-size: 10vw;
-    margin-bottom: 1vw;
+    font-size: clamp(1rem, 3vw, 5rem);
+    margin-bottom: 0.5rem;
     color: rgb(0, 0, 0);
 }
 
 .my-links footer {
     color: rgb(0, 0, 0);
-    font-size: 5vw;
-    padding: 5vw;
-    margin-top: 10vw;
+    font-size: clamp(1rem, 3vw, 5rem);
+    padding: 2rem;
+    margin-top: 0.5rem;
 }
 
 /* Formatação dos "LINKS ESCALADOS"
@@ -77,11 +77,11 @@ body.my-links {
     background: rgb(0, 150, 255);
     color: rgb(0, 0, 0);
     text-decoration: none;
-    padding: 2vw;
-    margin: 2vw 0;
-    border-radius: 1vw;
     transition: all 0.5s ease;
-    font-size: 7vw;
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+    margin: clamp(0.5rem, 2vw, 1.5rem) 0;
+    border-radius: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(1rem, 3vw, 5rem);
 }
 
 .my-links .links a:hover {
@@ -94,7 +94,7 @@ body.my-links {
 */
 .my-links .links-icone img {
     width: auto;
-    height: 10vw;
+    height: clamp(1.5rem, 10vw, 5rem);
     transition: all 0.5s ease;
 }
 
@@ -130,18 +130,18 @@ body.home h3,
 body.home h4,
 body.home h5,
 body.home h6 {
-    font-size: 4vw;
+    font-size: clamp(1rem, 3vw, 5rem);
     font-family: "Comic_Neue";
     font-style: italic;
 }
 
 .home header {
-    font-size: 4vw;
     font-family: "Gloria_Hallelujah";
     background: rgb(50, 50, 50);
     color: rgb(255, 255, 255);
-    padding: 5vw;
     text-align: center;
+    font-size: clamp(1rem, 3vw, 5rem);
+    padding: clamp(1rem, 5vw, 3rem);
 }
 
 .home .container {
@@ -152,20 +152,20 @@ body.home h6 {
 }
 
 .home .post {
-    font-size: 5vw;
     background: rgb(240, 240, 200);
-    padding: 5vw;
-    margin: 3vw;
-    border-radius: 2vw;
+    font-size: clamp(1rem, 3vw, 5rem);
+    padding: clamp(1rem, 5vw, 3rem);
+    margin: clamp(0.5rem, 3vw, 2rem);
+    border-radius: clamp(0.5rem, 2vw, 1.5rem);
     box-shadow: 0 0 1vw rgb(0, 0, 0);
 }
 
 .home footer {
-    font-size: 4vw;
     background: rgb(50, 50, 50);
     color: rgb(255, 255, 255);
     font-family: "Gloria_Hallelujah";
     text-align: center;
+    font-size: 4vw;
     padding: 2vw;
     margin-top: 2vw;
 }
@@ -185,10 +185,10 @@ body.home h6 {
     background: rgb(120, 120, 120);
     color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 5vw;
-    margin: 3vw;
     width: auto;
-    border-radius: 2vw;
+    padding: clamp(1rem, 5vw, 2rem);
+    margin: clamp(0.7rem, 3vw, 2rem);
+    border-radius: clamp(0.5rem, 2vw, 1.5rem);
     transition: all 1.5s ease;
 }
 
@@ -196,10 +196,10 @@ body.home h6 {
     background: rgb(200, 200, 200);
     color: rgb(0, 0, 0);
     transform: scale(1.1);
-    animation: girar 2s ease;
+    animation: to-rotate 2s ease;
 }
 
-@keyframes girar {
+@keyframes to-rotate {
     0% {
         transform: scale(1.1) rotate(0deg);
     }
@@ -283,10 +283,10 @@ body.home h6 {
     color: rgb(0, 255, 0);
     font-family: serif;
     text-decoration: none;
-    font-size: 5vw;
-    padding: 2vw;
-    margin: 1vw;
-    border-radius: 1vw;
+    font-size: clamp(1rem, 5vw, 2rem);
+    padding: clamp(0.7rem, 2vw, 1rem);
+    margin: clamp(0.5rem, 1vw, 1rem);
+    border-radius: clamp(0.3rem, 1vw, 1rem);
     box-shadow: 0 0 1vw rgba(0, 0, 0, 0);
 }
 
@@ -297,10 +297,10 @@ body.home h6 {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0.1rem;
-    padding: 0.1rem;
+    margin: 1rem;
+    padding: 1rem;
     max-width: 100%;
-    font-size: 1rem;
+    height: 100%;
 }
 
 /* Formatação dos "DETALHES E SUMÁRIOS"
@@ -318,7 +318,7 @@ body.home h6 {
     display: flex;
     cursor: pointer;
     font-weight: bold;
-    font-size: 6vw;
+    font-size: clamp(1rem, 3vw, 5rem);
 }
 
 .summary::-webkit-details-marker {
@@ -329,8 +329,8 @@ body.home h6 {
 .summary-bottom::before {
     content: ">";
     transition: all 0.5s ease;
-    margin-right: 2rem;
-    padding: 1rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
 }
 
 .details-top[open]>.summary-top::before,
@@ -383,7 +383,7 @@ Foco em dispositivos com telas menores, e depois ajustar para telas maiores
 /* Possui suporte a essas telas:
 Mobile P: max-width: 360px
 Mobile M: max-width: 480px
-Mobile G / Phablet (phone + tablet): max-width: 576px
+Mobile G / Phablet: max-width: 576px
 Tablet P: max-width: 768px
 Tablet L: max-width: 992px
 Laptop: max-width: 1200px
@@ -391,27 +391,27 @@ Desktop grande: min-width: 1200px
 4K: min-width: 1440px
 */
 
-/* Mobile P
+/* Mobile Pequeno
 @media screen and (max-width: 360px)
 Padrão usado como referência
 */
 
-/* Mobile M
+/* Mobile Médio
 @media screen and (max-width: 480px)
 Padrão de referência se adapta tranquilamente
 */
 
-/* Mobile G / Phablet (phone + tablet)
+/* Mobile Grande / Phablet (phone + tablet)
 @media screen and (max-width: 576px)
 Padrão de referência se adapta tranquilamente
 */
 
-/* Tablet P
+/* Tablet Portrait
 @media screen and (max-width: 768px)
 Padrão de referência se adapta tranquilamente
 */
 
-/* Tablet L
+/* Tablet Landscape
 @media screen and (max-width: 992px)
 Padrão de referência se adapta tranquilamente
 */
@@ -421,7 +421,7 @@ Padrão de referência se adapta tranquilamente
 Padrão de referência se adapta tranquilamente
 */
 
-/* Desktop grande
+/* Desktop Grande
 @media screen and (min-width: 1200px)
 Padrão de referência se adapta tranquilamente
 */
