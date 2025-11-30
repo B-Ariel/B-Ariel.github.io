@@ -1,3 +1,5 @@
+/*----------*----------*----------*/
+
 /* Importação de fontes
 */
 @font-face {
@@ -14,6 +16,8 @@
     font-family: "Comic_Neue";
     src: url("/assets/fonts/comic_neue/comic-neue-regular.ttf") format("truetype");
 }
+
+/*----------*----------*----------*/
 
 /*CSS da página: my-links
 */
@@ -112,7 +116,7 @@ body.my-links {
     display: none;
 }
 
-/*----------*/
+/*----------*----------*----------*/
 
 /*CSS da página: index.html e adjacentes
 */
@@ -140,8 +144,8 @@ body.home h6 {
     background: rgb(50, 50, 50);
     color: rgb(255, 255, 255);
     text-align: center;
-    font-size: clamp(1rem, 3vw, 5rem);
-    padding: clamp(1rem, 5vw, 3rem);
+    padding: clamp(0.3rem, 1.3vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 2.5rem);
 }
 
 .home .container {
@@ -165,9 +169,8 @@ body.home h6 {
     color: rgb(255, 255, 255);
     font-family: "Gloria_Hallelujah";
     text-align: center;
-    font-size: 4vw;
-    padding: 2vw;
-    margin-top: 2vw;
+    font-size: clamp(1rem, 2vw, 3rem);
+    padding: clamp(1rem, 1vw, 1.5rem);
 }
 
 /* Formatação dos "LINKS IMPORTANTES"
@@ -186,8 +189,8 @@ body.home h6 {
     color: rgb(255, 255, 255);
     text-decoration: none;
     width: auto;
-    padding: clamp(1rem, 5vw, 2rem);
-    margin: clamp(0.7rem, 3vw, 2rem);
+    padding: clamp(1rem, 3vw, 2rem);
+    margin: clamp(1rem, 3vw, 2rem);
     border-radius: clamp(0.5rem, 2vw, 1.5rem);
     transition: all 1.5s ease;
 }
@@ -418,15 +421,12 @@ Padrão de referência se adapta tranquilamente
 
 /* Laptop
 @media screen and (max-width: 1200px)
-Padrão de referência se adapta tranquilamente
 */
 
 /* Desktop Grande
 @media screen and (min-width: 1200px)
-Padrão de referência se adapta tranquilamente
 */
 
 /* 4K
 @media screen and (min-width: 1440px)
-Padrão de referência se adapta tranquilamente
 */
