@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Breno - Guia de MARKDOWN - Parte 02
+  </title>
+
+  <script src="/assets/components/web-component/head/head.js">
+  </script>
+
+  <script type="module" src="/assets/js/script.js">
+  </script>
+
+</head>
+
+<body class="home">
+
+  <header>
+
+    <div id="MyHeader">
+    </div>
+
+    <script src="/assets/components/web-component/header/header.js">
+    </script>
+
+  </header>
+
+  <div class="container">
+
+    <div class="page">
+      <h1>
+        Guia de MARKDOWN:
+        <br>
+        - Parte 02
+      </h1>
+      <br>
+
+      <div class="links-page">
+
+        <div class="links-page-no-selected">
+          <a href="/pages/markdown/markdown-page-1.html" target="_self">
+            Parte 01
+          </a>
+        </div>
+
+        <div class="links-page-selected">
+          <a href="/pages/markdown/markdown-page-2.html" target="_self">
+            Parte 02
+          </a>
+        </div>
+
+      </div>
+
+      <br>
+      <hr>
+      <p>
+        <b>Para acessar a CHEAT SHEET desse guia, acesse a pagina: BUGIGANGAS!</b>
+      </p>
+      <hr>
+      <p>
+        Antes de seguir com este conteúdo, <b>recomendo a leitura da página anterior.</b>
+        Nele são abordados conceitos essenciais para iniciantes, já aqui, é abordado os recursos
+        essenciais para organização / comunicação.
+        <br><br>
+        Se ainda não conferiu, vale a pena dar uma
+        olhada para aproveitar ao máximo este guia! 😉
+      </p>
+      <p> Um <b>Guia de MARKDOWN - INTERMEDIÁRIO</b> que fará você sobreviver no GitHub, e que, nesta segunda e última
+        parte,
+        abordará estes temas:
+
+      <ul class="links-normal">
+        <li>
+          <b><a href="/pages/markdown/markdown-page-2.html#tables" target="_self">
+              Tabelas:
+            </a></b>
+          <br>
+          <a href="/pages/markdown/markdown-page-2.html#creating-tables" target="_self">
+            - Criação de tabelas
+          </a>
+          <br>
+          <a href="/pages/markdown/markdown-page-2.html#formatting" target="_self">
+            - Formatação
+          </a>
+          <br>
+          <a href="/pages/markdown/markdown-page-2.html#text-alignment" target="_self">
+            - Alinhamento de texto
+          </a>
+        </li>
+      </ul>
+
+      <ul class="links-normal">
+        <li>
+          <b><a href="/pages/markdown/markdown-page-2.html#collected-sections" target="_self">
+              Seções recolhidas:
+            </a></b>
+          <br>
+          <a href="/pages/markdown/markdown-page-2.html#hiding-sections" target="_self">
+            - Ocultando seções
+          </a>
+        </li>
+      </ul>
+
+      <ul class="links-normal">
+        <li>
+          <b><a href="/pages/markdown/markdown-page-2.html#diagrams" target="_self">
+              Diagramas:
+            </a></b>
+          <br>
+          <a href="/pages/markdown/markdown-page-2.html#creating-diagrams" target="_self">
+            - Criação de diagramas
+          </a>
+          <br>
+          <a href="/pages/markdown/markdown-page-2.html#map-creation" target="_self">
+            - Criação de mapas
+          </a>
+          <br>
+          <a href="/pages/markdown/markdown-page-2.html#3d-object-creation" target="_self">
+            - Criação de objetos 3D
+          </a>
+        </li>
+      </ul>
+
+      <ul class="links-normal">
+        <li>
+          <b><a href="/pages/markdown/markdown-page-2.html#mathematical-expressions" target="_self">
+              Expressões matemáticas:
+            </a></b>
+          <br>
+          <a href="/pages/markdown/markdown-page-2.html#latex-format" target="_self">
+            - Formato LATEX
+          </a>
+        </li>
+      </ul>
+      </p>
+      <br>
+      <p>
+        <b>ATENÇÃO - Neste guia será apresentado alguns exemplos para facilitar a explicação, então fique atento
+          aos detalhes.</b>
+      </p>
+      <hr>
+
+      <details class="details details-rectangular">
+
+        <summary class="summary summary-rectangular" id="tables">
+          Tabelas:
+        </summary>
+
+        <hr>
+
+        <details class="details details-underlined">
+
+          <summary class="summary summary-underlined" id="creating-tables">
+            1. Criação de tabelas:
+          </summary>
+
+          <p>
+            <b>Utilize | (barras verticais / pipes) e - (hífens / traços) para estruturar tabelas.</b> A linha de
+            cabeçalho <b>deve ter no mínimo três hífens</b>.
+          </p>
+          <p>
+            <b>E se quiser exibir uma | (barras verticais / pipes) dentro de uma célula, preceda-a com uma \ (barra
+              invertida).</b>
+            <br><br>
+            Exemplo:
+
+          <pre class="code-example"><code class="language-markdown">
+| Cabeçalho 1 | Cabeçalho 2 |
+| ----------- | ----------- |
+| Célula 1    | Célula 2    |
+| Célula 3    | Célula 4    |
+            </code></pre>
+
+          <pre class="code-example"><code class="language-markdown">
+<table border="1" cellpadding="5" cellspacing="5"><tr><th>Cabeçalho 1</th><th>Cabeçalho 2</th></tr><tr><td>Célula 1</td><td>Célula 2</td></tr><tr><td>Célula 3</td><td>Célula 4</td></tr></table>
+          </code></pre>
+
+          </p>
+
+        </details>
+
+        <hr>
+
+        <details class="details details-underlined">
+
+          <summary class="summary summary-underlined" id="formatting">
+            2. Formatação:
+          </summary>
+
+          <p>
+            <b>Dentro das tabelas, você pode usar links, blocos de código embutidos e estilos de texto, </b> como
+            negrito, itálico etc.
+            <br><br>
+            Exemplo:
+
+          <pre class="code-example"><code class="language-markdown">
+| CMD | Descrição |
+| --- | --- |
+| `cls` | *Limpa* a tela |
+| `mkdir` | **Cria** Pastas |
+| `color` | *Muda cores* |
+        </code></pre>
+
+          <pre class="code-example"><code class="language-markdown">
+<table border="1" cellpadding="5" cellspacing="5"><tr><th>CMD</th><th>Descrição</th></tr><tr><td>cls</td><td><i>Limpa</i>a tela</td></tr><tr><td>mkdir</td><td><b>Cria</b> Pastas</td></tr><tr><td>color</td><td><i>Muda cores</i></td></tr></table>
+        </code></pre>
+
+          </p>
+
+        </details>
+
+        <hr>
+
+        <details class="details details-underlined">
+
+          <summary class="summary summary-underlined" id="text-alignment">
+            3. Alinhamento de texto:
+          </summary>
+
+          <p>
+            <b>Use essa sintaxe, que utiliza : (dois-pontos) e - (hífens / traços) para alinhar texto:</b>
+          <ul>
+            <li>
+              esquerda (:---)
+            </li>
+            <li>
+              centro (:---:)
+            </li>
+            <li>
+              direita (---:)
+            </li>
+          </ul>
+          Exemplo:
+
+          <pre class="code-example"><code class="language-markdown">
+| Esquerda | Centro | Direita |
+| :--- | :---: | ---: |
+| rgb(255,0,0) | #FF0000 | red |
+| rgb(0,255,0) | #00FF00 | green |
+| rgb(0,0,255) | #0000FF | blue |
+            </code></pre>
+
+          <pre class="code-example"><code class="language-markdown">
+<table border="1" cellpadding="5" cellspacing="5"><tr><th>Esquerda</th><th>Centro</th><th>Direita</th></tr><tr><td style="text-align: left;">rgb(255,0,0)</td><td style="text-align: center;">#FF0000</td><td style="text-align: right;">red</td></tr><tr><td style="text-align: left;">rgb(0,255,0)</td><td style="text-align: center;">#00FF00</td><td style="text-align: right;">green</td></tr><tr><td style="text-align: left;">rgb(0,0,255)</td><td style="text-align: center;">#0000FF</td><td style="text-align: right;">blue</td></tr></table>
+            </code></pre>
+          </p>
+
+        </details>
+
+        <hr>
+
+      </details>
+
+      <hr>
+
+      <details class="details details-rectangular">
+
+        <summary class="summary summary-rectangular" id="collected-sections">
+          Seções recolhidas:
+        </summary>
+
+        <hr>
+
+        <details class="details details-underlined">
+
+          <summary class="summary summary-underlined" id="hiding-sections">
+            1. Ocultando seções:
+          </summary>
+
+          <p>
+            <b>Use a tag HTML &lt;details&gt; para criar seções recolhidas</b> que podem ser expandidas pelo leitor.
+          </p>
+          <p>
+            E qualquer Markdown dentro de &lt;details&gt; será recolhido. Então <b>utilize &lt;summary&gt; para definir
+              o rótulo que será clicável.</b>
+          </p>
+          <p>
+            <b>E caso queira que a seção seja exibida aberta, é importante que adicione open à tag &lt;details&gt;.</b>
+            <br>
+            Exemplo:
+
+          <pre class="code-example"><code class="language-markdown">
+&lt;details open&gt;
+
+  &lt;summary&gt;
+    Dicas para seções recolhidas
+  &lt;/summary&gt;
+
+  ### Você pode adicionar cabeçalhos, códigos etc.
+
+  ```Python
+    print("Olá Mundo")
+  ```
+&lt;/details&gt;
+        </code></pre>
+
+          <pre class="code-example"><code class="language-markdown">
+<details open><summary>Dicas para seções recolhidas</summary>
+<h3>Você pode adicionar cabeçalhos, códigos etc.</h3>
+print("Olá Mundo")</details>
+        </code></pre>
+
+          <b>OBSERVE:
+            <br>
+            Assim como pode adicionar texto dentro de uma seção recolhida, você também pode adicionar imagens e muitas
+            outras coisas.</b>
+          </p>
+
+        </details>
+
+        <hr>
+
+      </details>
+
+      <hr>
+
+      <details class="details details-rectangular">
+
+        <summary class="summary summary-rectangular" id="diagrams">
+          Diagramas:
+        </summary>
+
+        <hr>
+
+        <details class="details details-underlined">
+
+          <summary class="summary summary-underlined" id="creating-diagrams">
+            1. Criação de diagramas:
+          </summary>
+
+          <p>
+            <b>Crie diagramas com ferramentas como MERMAID e mapas interativos com GEOJSON ou TOPOJSON dentro de blocos
+              de
+              código delimitados.</b>
+          </p>
+          <p>
+            <b> Por exemplo, para criar um diagrama com MERMAID:</b> Em que ocorre a definição do início de um gráfico
+            direcionado:
+
+          <pre class="code-example"><code class="language-markdown">
+```mermaid
+graph TD;
+A-->B;
+A-->C;
+B-->D;
+C-->D;
+```
+      </code></pre>
+
+          <div class="mermaid">
+            graph TD;
+            A-->B;
+            A-->C;
+            B-->D;
+            C-->D;
+          </div>
+          </p>
+
+        </details>
+
+        <hr>
+
+        <details class="details details-underlined">
+
+          <summary class="summary summary-underlined" id="map-creation">
+            2. Criação de mapas:
+          </summary>
+
+          <p>
+            <b>Você pode usar a sintaxe GEOJSON ou TOPOJSON para criar mapas interativos.</b> Para criar um mapa,
+            adicione o GEOJSON ou TOPOJSON dentro de um bloco de código
+            delimitado com o identificador da sintaxe, GEOJSON ou TOPOJSON.
+            <br>
+            Exemplo:
+            <br><br>
+            Aqui um quadrado sobre a cidade do Rio de Janeiro em GEOJSON:
+
+          <pre class="code-example"><code class="language-markdown">
+```geojson
+{
+    "type": "Feature",
+    "properties": {},
+    "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+    [
+        [-43.2029, -22.925],
+        [-43.1429, -22.925],
+        [-43.1429, -22.875],
+        [-43.2029, -22.875],
+        [-43.2029, -22.925]
+            ]
+        ]
+    }
+}
+```</code></pre>
+
+          </p>
+
+        </details>
+
+        <hr>
+
+        <details class="details details-underlined">
+
+          <summary class="summary summary-underlined" id="3d-object-creation">
+            3. Criação de objetos 3D:
+          </summary>
+
+          <p>
+            <b>Você pode usar também a sintaxe ASCII STL diretamente no markdown para criar modelos 3D interativos.</b>
+            Para exibir um modelo, adicione a sintaxe ASCII STL dentro de um bloco de código cercado com o identificador
+            de sintaxe stl.
+            <br><br>
+            Exemplo:
+            <br><br>
+            Aqui um modelo 3D de uma pirâmide em STL:
+
+          <pre class="code-example"><code class="language-markdown">
+```stl
+solid pyramid
+  facet normal 0.0 0.0 1.0
+    outer loop
+      vertex 0.0 0.0 1.0
+      vertex -1.0 -1.0 0.0
+      vertex 1.0 -1.0 0.0
+    endloop
+  endfacet
+  facet normal 1.0 1.0 1.0
+    outer loop
+      vertex 0.0 0.0 1.0
+      vertex 1.0 -1.0 0.0
+      vertex 1.0 1.0 0.0
+    endloop
+  endfacet
+  facet normal -1.0 1.0 1.0
+    outer loop
+      vertex 0.0 0.0 1.0
+      vertex 1.0 1.0 0.0
+      vertex -1.0 1.0 0.0
+    endloop
+  endfacet
+  facet normal -1.0 -1.0 1.0
+    outer loop
+      vertex 0.0 0.0 1.0
+      vertex -1.0 1.0 0.0
+      vertex -1.0 -1.0 0.0
+    endloop
+  endfacet
+  facet normal 0.0 -1.0 0.0
+    outer loop
+      vertex -1.0 -1.0 0.0
+      vertex 1.0 -1.0 0.0
+      vertex 1.0 1.0 0.0
+    endloop
+  endfacet
+  facet normal 0.0 1.0 0.0
+    outer loop
+      vertex 1.0 1.0 0.0
+      vertex -1.0 1.0 0.0
+      vertex -1.0 -1.0 0.0
+    endloop
+  endfacet
+endsolid pyramid
+```
+          </code></pre>
+
+          </p>
+
+        </details>
+
+        <hr>
+
+      </details>
+
+      <hr>
+
+      <details class="details details-rectangular">
+
+        <summary class="summary summary-rectangular" id="mathematical-expressions">
+          Expressões matemáticas:
+        </summary>
+
+        <hr>
+
+        <details class="details details-underlined">
+
+          <summary class="summary summary-underlined" id="latex-format">
+            1. Formato LATEX:
+          </summary>
+
+          <p>
+            <b>O GITHUB suporta expressões matemáticas formatadas em LATEX usando o MATHJAX.</b> <b>Para usar uma
+              expressão
+              matemática junto com um texto, você tem que usar o símbolo do $ (cifrão), ou
+              iniciar a expressão com $` e encerrá-la com `$ (cifrões acompanhados com acentos graves).</b>
+            <br>
+            Exemplo:
+
+          <pre class="code-example"><code class="language-markdown">
+O logaritmo de 32 na base 2 (log<sub>2</sub> 32 = 5):
+$\log_2 32 = 5$
+
+A divisão de 5 por 1/2 (5 ÷ 1/2 = 10):
+$` 5 \div \frac{1}{2} = 10 `$
+
+A multiplicação de 5 por 2 (5 x 2 = 10):
+$` 5 \times 2 = 10 `$
+      </code></pre>
+
+          </p>
+          <p>
+            <b>Ou se quiser, pode adicionar a expressão matemática como um bloco, para isso,
+              apenas inicie uma nova linha e delimite a expressão com dois símbolos de $$ (cifrões).</b>
+            <br>
+            Exemplo:
+
+          <pre class="code-example"><code class="language-markdown">
+O resto de 10 por 3 (10 mod 3 = 1):
+$$10 \mod 3 = 1$$
+          </code></pre>
+
+          </p>
+          <p>
+            <b>Também é possível usar a sintaxe do bloco de código (três acentos graves, no início e fim) com o math
+              para
+              exibir uma
+              expressão matemática como um bloco.</b>
+            <br>
+            Exemplo:
+
+          <pre class="code-example"><code class="language-markdown">
+A multiplicação de 6 por 8 (6 x 8 = 48):
+```math
+6 \cdot 8 = 48
+```
+      </code></pre>
+
+          </p>
+          <p>
+            <b>OBSERVE:
+              <br>
+              Escape do sinal: Para exibir um $ cifrão literal, use \ (barra invertida)antes do $ (cifrão). Ou coloque o
+              $
+              (cifrão) entre a tag html &lt;span&gt;.</b>
+            <br>
+            Exemplo:
+
+          <pre class="code-example"><code class="language-markdown">
+Aqui o cifrão é exibido como um texto qualquer!
+Logo esse código não renderiza!
+
+&lt;span&gt;$&lt;/span&gt;\log_2 32 = 5$
+      </code></pre>
+
+          </p>
+
+        </details>
+
+        <hr>
+
+      </details>
+
+      <hr>
+
+      <p>
+        <b>EM CASOS DE DÚVIDA, SEMPRE BUSCAR A DOCUMENTAÇÃO OFICIAL!</b>
+      </p>
+
+    </div>
+
+  </div>
+
+  <footer>
+
+    <div id="MyFooter">
+    </div>
+
+    <script src="/assets/components/web-component/footer/footer.js">
+    </script>
+
+  </footer>
+
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+
+</body>
+
+</html>
