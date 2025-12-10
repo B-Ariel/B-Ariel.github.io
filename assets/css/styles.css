@@ -4,7 +4,7 @@
 */
 @font-face {
     font-family: "brasilero";
-    src: url("/assets/fonts/Brasilero/brasilero.otf") format("truetype");
+    src: url("/assets/fonts/brasilero/brasilero.otf") format("truetype");
 }
 
 @font-face {
@@ -425,4 +425,5 @@ Padrão de referência: se adapta
 /* 4K
 @media screen and (min-width: 1440px)
 Padrão de referência: se adapta
+
 */
