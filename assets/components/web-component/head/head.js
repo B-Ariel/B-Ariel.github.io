@@ -1,6 +1,6 @@
 // Ponto de partida para endereços
 const base = document.createElement("base");
-base.href ="http://127.0.0.1:5500/";
+base.href ="https://b-ariel.github.io/";
 document.head.appendChild(base);
 
 // Link do CSS
@@ -21,11 +21,3 @@ const linkPrismjs = document.createElement('link');
 linkPrismjs.rel = 'stylesheet';
 linkPrismjs.href = '/assets/css/prismjs/prism-minified-version.css';
 document.head.appendChild(linkPrismjs);
-
-/* Endereço local:
-http://127.0.0.1:5500/
-*/
-
-/* Endereço hospedado:
-https://b-ariel.github.io/
-*/
