@@ -2,7 +2,7 @@
 
     X - - - - - - - X - - - - - - - X
 
-    EM PORTUGUÊS:
+    LICENÇA EM PORTUGUÊS:
     Licença MIT
 
     Direitos autorais (c) 2025 Breno Ariel
@@ -22,15 +22,14 @@
     ADEQUAÇÃO A UM DETERMINADO FIM E NÃO VIOLAÇÃO. EM NENHUMA HIPÓTESE OS
     AUTORES OU TITULARES DE DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANOS OU OUTRA
     RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, ATO ILÍCITO OU OUTRO, DECORRENTE DE,
-    DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO
-    SOFTWARE.
+    DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
 
     X - - - - - - - X - - - - - - - X
 
-    EN ESPAÑOL:
+    LICENCIA EN ESPAÑOL:
     Licencia MIT
     
-    Copyright © 2025 Breno Ariel
+    Derechos de autor © 2025 Breno Ariel
 
     Se concede permiso, sin cargo alguno, a cualquier persona que obtenga una copia
     de este software y la documentación asociada (el «Software»), para utilizar
@@ -51,7 +50,7 @@
 
     X - - - - - - - X - - - - - - - X
 
-    IN ENGLISH:
+    LICENSE IN ENGLISH:
     MIT License
 
     Copyright (c) 2025 Breno Ariel
@@ -71,25 +70,65 @@
     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
     X - - - - - - - X - - - - - - - X
 
 -->
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" prefix="og: https://ogp.me/ns#">
 
 <head>
+    <!--
+        Metadados
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Website para armazenar minhas ideias, guias, anotações e quaisquer registros sobre tecnologia que considero interessante.">
+    <meta name="author" content="Breno Ariel">
+
     <title>
         Breno - Página inicial
     </title>
 
-    <script src="/assets/components/web-component/head/head.js">
-    </script>
+    <link rel="stylesheet" href="/assets/css/main-styles.css">
+
+    <link rel="icon" href="/assets/img/icones/my-logo/my-mark-black.png" type="image/png">
+
+    <!--
+        Open graph
+    -->
+    <meta property="og:title" content="Breno - Página inicial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://b-ariel.github.io/" />
+    <meta property="og:description"
+        content="Website para armazenar minhas ideias, guias, anotações e quaisquer registros sobre tecnologia que considero interessante." />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="b-ariel" />
+    <!--
+        Open graph - og:image
+    -->
+    <meta property="og:image" content="https://b-ariel.github.io/assets/img/icones/my-logo/my-mark-black.png" />
+    <meta property="og:image:secure_url"
+        content="https://b-ariel.github.io/assets/img/icones/my-logo/my-mark-black.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Ícone </> em quadrado preto." />
+
+    <!--
+        X cards - Twitter cards
+    -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Breno - Página inicial" />
+    <meta name="twitter:description"
+        content="Website para armazenar minhas ideias, guias, anotações e quaisquer registros sobre tecnologia que considero interessante." />
+    <!--
+        X cards - Twitter cards - twitter:image
+    -->
+    <meta name="twitter:image" content="https://b-ariel.github.io/assets/img/icones/my-logo/my-mark-black.png" />
 
 </head>
 
@@ -97,89 +136,162 @@
 
     <header>
 
-        <div id="MyHeader">
-        </div>
+        <h1>
+            Seja muito bem-vindo(a) ao meu site!😎
+        </h1>
+        <h2>
+            O espaço onde guardo minhas anotações 🤓☝️
+        </h2>
 
-        <script src="/assets/components/web-component/header/header.js">
-        </script>
+        <nav class="links-header">
+            <a href="index.html" target="_self">
+                Página inicial
+            </a>
+            <a href="src/about.html" target="_self">
+                Sobre mim
+            </a>
+            <a href="src/my-links.html" target="_self">
+                Meus links
+            </a>
+        </nav>
 
     </header>
 
-    <div class="container">
-        
-        <br><br><br>
-        <hr>
+    <main class="container">
 
-        <div class="page">
-            <h1>
+        <section class="page">
+            <h3>
                 Olá caro leitor(a)
-            </h1>
+            </h3>
             <p>
-                Fiz este website para armazenar minhas ideias, guias, anotações e registros sobre o mundo da tecnologia
+                Fiz este sítio eletrônico para armazenar minhas ideias, guias, anotações e quaisquer registros sobre tecnologia
                 que considero interessante.
             </p>
-        </div>
+            <p>
+                E <mark>ainda está na fase de construção</mark>, então, se você encontrar algum erro ou tiver alguma sugestão, por
+                favor, me avise!
+            </p>
+            <p>
+                Grato pela compreensão e por visitar meu site! Espero que encontre algo útil aqui. 😊
+            </p>
+        </section>
+
+        <section class="page">
+            <h3>
+                Atenção!
+            </h3>
+            <p>
+                <strong>Para uma melhor experiência, recomendo deixar o <i lang="en">JavaScript</i> ativado.</strong>
+            </p>
+            <p>
+                Pois componentes importantes, como o cabeçalho, rodapé, exemplos de código ...
+            </p>
+            <p>
+                <mark>São carregados via <i lang="en">JavaScript</i> em certas páginas.</mark>
+            </p>
+        </section>
 
         <hr>
-        <br><br><br>
 
-        <div class="page links-normal">
-            <h1>
+        <section class="page links-normal">
+            <h3>
                 <a href="/pages/bugigangas/bugigangas.html" target="_self">
                     Minhas BUGIGANGAS aqui
                 </a>
-            </h1>
+            </h3>
             <p>
                 Página para <b>acessar meus arquivos!</b>
             </p>
             <p>
-                <b>Última data de atualização:
-                    <br>
-                    21-11-2025</b>
+                <b>Última data de atualização:</b>
+                <time datetime="2026-06-12">12 de junho de 2026</time>
             </p>
-        </div>
+        </section>
 
-        <div class="page links-normal">
-            <h1>
+        <article class="page links-normal">
+            <h3>
                 <a href="/pages/markdown/markdown-page-1.html" target="_self">
-                    Guia de MARKDOWN (versão GFM 0.29)
+                    Guia de <i lang="en">MARKDOWN</i> (versão <i lang="en">GFM</i> 0.29)
                 </a>
-            </h1>
+            </h3>
             <p>
-                <b>Guia de MARKDOWN</b> que fará você sobreviver no GITHUB!
+                <b>Guia de <i lang="en">MARKDOWN</i></b> que fará você sobreviver no <i lang="en">GITHUB</i> !
             </p>
             <p>
-                <b>Última data de atualização:
-                    <br>
-                    21-11-2025</b>
+                <b>Última data de atualização:</b>
+                <time datetime="2026-06-12">12 de junho de 2026</time>
             </p>
-        </div>
+        </article>
 
-        <div class="page links-normal">
-            <h1>
+        <article class="page links-normal">
+            <h3>
                 <a href="/pages/database/database-page-1.html">
                     O que é um BANCO DE DADOS?
                 </a>
-            </h1>
+            </h3>
             <p>
-                <b>Este resumo sobre BD</b> fará você entender melhor!
+                Este <b>resumo</b> fará você entender melhor!
             </p>
             <p>
-                <b>Última data de atualização:
-                    <br>
-                    22-11-2025</b>
+                <b>Última data de atualização:</b>
+                <time datetime="2026-06-12">12 de junho de 2026</time>
             </p>
-        </div>
 
-    </div>
+        </article>
+
+    </main>
 
     <footer>
 
-        <div id="MyFooter">
-        </div>
+        <section id="footer-main">
+            <h4>
+                Direitos autorais &copy;
+            </h4>
+            <p>
+                Licença MIT
+            </p>
+            <p>
+                <time datetime="2025">2025</time>
+            </p>
+            <p>
+                Breno Ariel
+            </p>
+        </section>
 
-        <script src="/assets/components/web-component/footer/footer.js">
-        </script>
+        <section id="footer-secondary">
+            <h4>
+                Links interessantes:
+            </h4>
+            <nav class="links-footer">
+                <ul>
+                    <li>
+                        <a href="assets/components/web-component/sketch.html" target="_self">
+                            Esboço web
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-disabled="true">
+                            em breve... sitemap
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-disabled="true">
+                            em breve... projetos
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-disabled="true">
+                            em breve... tutoriais
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-disabled="true">
+                            em breve... jogos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
 
     </footer>
 

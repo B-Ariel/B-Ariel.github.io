@@ -1,0 +1,504 @@
+/*----------*----------*----------*/
+
+/* Importação de fontes tipográficas - typeface
+*/
+@font-face {
+    font-family: "brasilero";
+    src: url("/assets/fonts/brasilero/brasilero.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "cabelelera";
+    src: url("/assets/fonts/cabelelera/cabelelera.otf") format("opentype");
+}
+
+/* Fonte do: Corpo do Texto
+*/
+@font-face {
+    font-family: "delius";
+    src: url("/assets/fonts/delius/delius-regular.ttf") format("truetype");
+}
+
+/* Fonte do: Título
+*/
+@font-face {
+    font-family: "lemonada";
+    src: url("/assets/fonts/lemonada/lemonada-variable-font_wght.ttf") format("truetype");
+}
+
+/* Fonte do: Rodapé
+*/
+@font-face {
+    font-family: "po-de-guarana";
+    src: url("/assets/fonts/po-de-guarana/po-de-guarana.ttf") format("truetype");
+}
+
+/*----------*----------*----------*/
+
+/*CSS da estrutura: index.html e adjacentes
+*/
+body.home {
+    font-family: "delius";
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(100, 100, 100);
+}
+
+.home header {
+    font-family: "delius";
+    background: rgb(50, 50, 50);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: clamp(0.3rem, 1.3vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 3rem);
+}
+
+/* Formatação do "CONTAINER PRINCIPAL"
+*/
+.home main.container {
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+    padding: auto;
+    overflow: hidden;
+}
+
+/* Formatação do "RODAPÉ"
+*/
+body.home footer {
+    background: rgb(50, 50, 50);
+    color: rgb(255, 255, 255);
+    font-family: "po-de-guarana";
+    font-size: clamp(1rem, 2vw, 3rem);
+    padding: 1rem;
+}
+
+footer #footer-main,
+footer #footer-secondary {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+footer #footer-secondary ul {
+    list-style: none;
+}
+
+/* Formatação das "PÁGINAS"
+*/
+.home .page {
+    background: rgb(240, 240, 200);
+    font-size: clamp(1rem, 2vw, 3rem);
+    padding: clamp(1rem, 5vw, 3rem);
+    margin: clamp(0.5rem, 3vw, 2rem);
+    border-radius: clamp(0.5rem, 2vw, 1.5rem);
+    box-shadow: 0 0 1vw rgb(0, 0, 0);
+}
+
+/* Formatação dos "TÍTULOS"
+*/
+body.home main.container h1,
+body.home main.container h2,
+body.home main.container h3,
+body.home main.container h4,
+body.home main.container h5,
+body.home main.container h6 {
+    font-size: clamp(1rem, 2vw, 3rem);
+    font-family: "lemonada";
+    font-style: italic;
+}
+
+/* Formatação dos "LINKS DO CABEÇALHO" - Se encontra no header
+*/
+.home .links-header {
+    display: flex;
+    cursor: pointer;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.home .links-header a {
+    background: rgb(120, 120, 120);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    width: auto;
+    padding: clamp(1rem, 3vw, 2rem);
+    margin: clamp(1rem, 3vw, 2rem);
+    border-radius: clamp(0.5rem, 2vw, 1.5rem);
+    transition: all 1.5s ease;
+}
+
+.home .links-header a:hover {
+    background: rgb(200, 200, 200);
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+    animation: to-rotate 2s ease;
+}
+
+@keyframes to-rotate {
+    0% {
+        transform: scale(1.1) rotate(0deg);
+    }
+
+    30% {
+        transform: scale(1.2) rotate(5deg);
+    }
+
+    60% {
+        transform: scale(1.2) rotate(-5deg);
+    }
+
+    90% {
+        transform: scale(1.1) rotate(5deg);
+    }
+}
+
+/* Formatação dos "LINKS DO RODAPE" - Se encontra no footer
+*/
+footer .links-footer a {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    overflow: hidden;
+    color: rgb(0, 150, 255);
+    transition: 0.5s ease;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+footer .links-footer a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 255, 255, 0.5);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+footer .links-footer a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+footer .links-footer a:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.5s ease;
+}
+
+/* Formatação dos "LINKS DAS PÁGINAS"
+*/
+.home .links-page {
+    display: flex;
+    cursor: pointer;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.home .links-page a:hover {
+    background: rgb(70, 130, 180);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    box-shadow: none;
+}
+
+/* Formatação dos "LINKS DAS PÁGINAS: NÃO SELECIONADAS"
+*/
+.home .links-page-no-selected a {
+    background: rgb(25, 25, 100);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 2vw;
+    margin: 2vw;
+    width: auto;
+    border-radius: 1vw;
+    transition: all 0.5s ease;
+}
+
+/* Formatação dos "LINKS DAS PÁGINAS: SELECIONADAS"
+*/
+.home .links-page-selected a {
+    background: rgba(0, 0, 0, 0);
+    color: rgb(25, 25, 100);
+    text-decoration: none;
+    padding: 2vw;
+    margin: 2vw;
+    width: auto;
+    border-radius: 1vw;
+    box-shadow: inset 0 0 0 1vw rgb(25, 25, 100);
+    transition: all 0.5s ease;
+}
+
+
+/* Formatação dos "LINKS NORMAIS"
+*/
+.home .links-normal a,
+.my-links .links-normal a {
+    cursor: pointer;
+    color: rgb(0, 0, 255);
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.home .links-normal a:hover,
+.my-links .links-normal a:hover {
+    color: rgb(255, 0, 0);
+}
+
+/* Formatação do "BLOCO DE CÓDIGO" - PrismJS
+Foi feita pela biblioteca de destaque de sintaxe leve e extensível para a web, PrismJS
+*/
+.home .code-example,
+.home .code-example * {
+    font-size: revert !important;
+    font-family: revert !important;
+}
+
+/* Formatação das "IMAGENS"
+*/
+.home .image img {
+    display: block;
+    margin: 0 auto;
+    width: clamp(30%, 50%, 100%);
+    height: auto;
+}
+
+/* Formatação das "LISTAS, TERMO E DESCRIÇÃO DA DEFINIÇÃO" - dl, dt e dd
+*/
+.home .container .page dl {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: rgb(10, 20, 30);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1vw rgb(0, 0, 0);
+}
+
+.home .container .page dl dt {
+    margin: 0.5rem 0.5rem 0rem 0.5rem;
+    padding: 0.5rem 0.5rem 0rem 1rem;
+    font-weight: bold;
+    color: rgb(0, 150, 255);
+    border-left: 0.5vw solid rgb(0, 150, 255);
+    transition: all 0.5s ease;
+}
+
+.home .container .page dl dd {
+    margin: 0rem 0.5rem 3rem 0.5rem;
+    padding: 0.5rem;
+    color: rgb(255, 255, 255);
+    background: rgb(30, 40, 50);
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+}
+
+.home .container .page dl dt:hover,
+.home .container .page dl dt:has(+ dd:hover) {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 100, 200);
+    border-left: 1vw solid rgb(255, 255, 255);
+}
+
+.home .container .page dl dt:hover+dd,
+.home .container .page dl dd:hover {
+    background: rgb(50, 60, 70);
+}
+
+/* Formatação dos "DETALHES E SUMÁRIOS" - details e summary
+*/
+.home .details {
+    padding: 1vw;
+    margin: 1vw;
+    border: 1vw solid rgba(0, 0, 0, 0);
+    border-radius: 1vw;
+    font-size: clamp(1rem, 2vw, 3rem);
+    transition: all 0.5s ease;
+}
+
+.home .summary {
+    display: flex;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    font-size: clamp(1rem, 2vw, 3rem);
+}
+
+.home .summary::marker {
+    display: none;
+}
+
+.home .summary-underlined::before,
+.home .summary-rectangular::before {
+    content: ">";
+    transition: all 0.5s ease;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+}
+
+.home .details-underlined[open]>.summary-underlined::before,
+.home .details-rectangular[open]>.summary-rectangular::before {
+    transform: rotate(90deg);
+}
+
+/* Formatação do "DETALHE E SUMÁRIO: SUBLINHADO"
+*/
+.home .details-underlined {
+    color: inherit;
+    border-color: transparent;
+    width: 90%;
+}
+
+.home .details-underlined>.summary-underlined:hover,
+.home .details-underlined[open]>.summary-underlined:hover {
+    color: rgb(0, 0, 255);
+}
+
+.home .details-underlined[open]>.summary-underlined:hover {
+    border-bottom: 1vw solid rgb(0, 0, 255);
+}
+
+.home .details-underlined[open]>.summary-underlined {
+    color: rgb(255, 0, 0);
+    border-bottom: 1vw solid rgb(255, 0, 0);
+}
+
+/* Formatação do "DETALHE E SUMÁRIO: RETANGULAR"
+*/
+.home .details-rectangular {
+    color: inherit;
+    border-color: rgb(0, 0, 0);
+}
+
+.home .details-rectangular[open] {
+    border-color: rgb(255, 0, 0);
+}
+
+.home .details-rectangular:hover,
+.home.details-rectangular[open]:hover {
+    border-color: rgb(0, 0, 255);
+}
+
+/* Formatação das "TABELAS"
+*/
+.responsive-table {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.information-table {
+    margin: 0.3rem;
+    padding: 0.3rem;
+    border: 0.3rem dashed rgb(0, 0, 0);
+    border-collapse: separate;
+    text-align: center;
+    background-color: rgb(10, 20, 30);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    table-layout: auto;
+}
+
+.information-table caption {
+    border: 0.3rem dotted rgb(128, 128, 128);
+    background-color: rgb(10, 20, 30);
+}
+
+.information-table thead tr th {
+    border: 0.3rem double rgb(0, 0, 0);
+    background-color: rgb(50, 60, 70);
+}
+
+.information-table tbody tr th {
+    border: 0.3rem double rgb(0, 0, 0);
+    background-color: rgb(30, 40, 50);
+}
+
+.information-table tbody tr td {
+    border: 0.3rem solid rgb(0, 0, 0);
+    background-color: rgb(30, 40, 50);
+}
+
+.information-table tbody tr td ul li {
+    list-style: none;
+    text-align: justify;
+    margin: 0;
+}
+
+.information-table tfoot tr td {
+    border: 0.3rem dotted rgb(128, 128, 128);
+    text-align: justify;
+}
+
+.information-table tbody tr th[scope="row"] {
+    background-color: rgb(50, 60, 70);
+}
+
+/* Formatação dos sem estilo
+*/
+.no-style {
+    list-style: none;
+}
+
+/*----------*----------*----------*/
+
+/* Responsividade - Mobile First:
+Foco em dispositivos com telas menores, para assim em seguida, ajustar para telas maiores
+*/
+
+/* Possui suporte a essas telas de referência:
+Mobile P: largura máxima: 360px
+Mobile M: largura máxima: 480px
+Mobile G / Phablet: largura máxima: 576px
+Tablet P: largura máxima: 768px
+Tablet L: largura máxima: 992px
+Laptop: largura máxima: 1200px
+Desktop G: largura mínima: 1200px
+4K: largura mínima: 1440px
+*/
+
+/* Mobile Pequeno
+Padrão usado como referência para aplicação do CSS
+@media screen and (max-width: 360px){}
+*/
+
+/* Mobile Médio
+Padrão de referência: se adapta
+@media screen and (max-width: 480px){}
+*/
+
+/* Mobile Grande / Phablet (phone + tablet)
+Padrão de referência: se adapta
+@media screen and (max-width: 576px){}
+*/
+
+/* Tablet Portrait (tablet modo retrato)
+Padrão de referência: se adapta
+@media screen and (max-width: 768px){}
+*/
+
+/* Tablet Landscape (tablet modo paisagem)
+Padrão de referência: se adapta
+@media screen and (max-width: 992px){}
+*/
+
+/* Laptop
+Padrão de referência: se adapta
+@media screen and (max-width: 1200px){}
+*/
+
+/* Desktop Grande
+Padrão de referência: se adapta
+@media screen and (min-width: 1200px){}
+*/
+
+/* 4K
+Padrão de referência: se adapta
+@media screen and (min-width: 1440px){}
+*/
+
+/*----------*----------*----------*/

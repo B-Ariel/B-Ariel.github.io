@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="pt-br" prefix="og: https://ogp.me/ns#">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Componente Web - Head
+    -->
+    <app-head page="database"></app-head>
+    <script src="/assets/components/web-component/head/head.js" defer>
+    </script>
+
+</head>
+
+<body class="home">
+
+    <header>
+
+        <!--
+            Componente Web - Header
+        -->
+        <app-header></app-header>
+        <script src="/assets/components/web-component/header/header.js" defer>
+        </script>
+
+    </header>
+
+    <main class="container">
+
+        <article class="page">
+
+            <h3>
+                O que é um BANCO DE DADOS?
+            </h3>
+
+            <p>
+                Um <b>BANCO DE DADOS (<abbr title="BANCO DE DADOS">BD</abbr>) é uma estrutura organizada de dados
+                    inter-relacionados</b>, projetada para
+                ser armazenada e gerida de forma eficiente por um <b><abbr
+                        title="SISTEMAS DE GERENCIAMENTO DE BANCO DE DADOS">SGBD</abbr></b>. O objetivo principal de um
+                <abbr title="BANCO DE DADOS">BD</abbr> é armazenar
+                informações de maneira sistemática, permitindo o acesso, a modificação e a recuperação rápida e
+                eficiente dos dados.
+            </p>
+            <p>
+                Já os <b><abbr title="SISTEMAS DE GERENCIAMENTO DE BANCO DE DADOS">SGBD</abbr>, ou SISTEMAS DE
+                    GERENCIAMENTO DE BANCO DE DADOS, são <i lang="en">softwares</i> projetados para
+                    gerenciar, organizar, armazenar e recuperar dados de maneira eficiente e segura.</b>
+                Eles permitem que os usuários interajam com os dados sem precisar se preocupar com os
+                detalhes de armazenamento e gerenciamento, oferecendo uma camada de abstração entre os
+                bancos de dados e os aplicativos ou usuários que os utilizam.
+            </p>
+            <p>
+                <b>E por serem o programa de computador que facilita a criação, o gerenciamento e a manipulação de um
+                    <abbr title="BANCO DE DADOS">BD</abbr>, possuem e devem possuir várias funcionalidades para serem
+                    classificados como um <abbr title="SISTEMAS DE GERENCIAMENTO DE BANCO DE DADOS">SGBD</abbr>.</b>
+            </p>
+            <p>
+                Exemplos de algumas dessas funções são:
+            </p>
+
+            <dl>
+                <dt>
+                    Modelagem de dados:
+                </dt>
+                <dd>
+                    Permitem a definição de estruturas de dados, como tabelas, colunas e tipos de dados.
+                </dd>
+
+                <dt>
+                    Manipulação de dados:
+                </dt>
+                <dd>
+                    Oferecem linguagens de consulta, como <i lang="en"><abbr
+                            title="STRUCTURED QUERY LANGUAGE">SQL</abbr></i>, para inserir, atualizar, excluir e
+                    consultar
+                    dados.
+                </dd>
+
+                <dt>
+                    Controle de acesso:
+                </dt>
+                <dd>
+                    Gerenciam permissões para garantir que apenas usuários autorizados possam acessar
+                    ou modificar os dados.
+                </dd>
+
+                <dt>
+                    Integridade e consistência:
+                </dt>
+                <dd>
+                    Mantêm a integridade dos dados através de mecanismos, como chaves estrangeiras e
+                    transações.
+                </dd>
+
+                <dt>
+                    Cópia de segurança e recuperação:
+                </dt>
+                <dd>
+                    Possuem recursos para criar cópias de segurança dos dados e recuperar informações em caso de
+                    falhas.
+                </dd>
+
+                <dt>
+                    Concorrência:
+                </dt>
+                <dd>
+                    Gerenciam o acesso simultâneo de múltiplos usuários para garantir a integridade dos
+                    dados durante operações concorrentes.
+                </dd>
+            </dl>
+
+            <p>
+                <b><abbr title="BANCO DE DADOS">BD</abbr> são fundamentais para diversas aplicações computacionais, e
+                    eles podem ser classificados basicamente em BANCO DE DADOS RELACIONAIS (<i lang="en"><abbr
+                            title="STRUCTURED QUERY LANGUAGE">SQL</abbr></i>), e NÃO RELACIONAIS (<i lang="en"><abbr
+                            title="NOT ONLY STRUCTURED QUERY LANGUAGE">NOSQL</abbr></i>).</b>
+            </p>
+
+        </article>
+
+        <article class="page">
+
+            <details class="details details-underlined">
+
+                <summary class="summary summary-underlined">
+                    BANCO DE DADOS RELACIONAL:
+                </summary>
+
+                <p>
+                    <b>BANCO DE DADOS RELACIONAIS, também conhecidos como <i lang="en"><abbr
+                                title="STRUCTURED QUERY LANGUAGE">SQL</abbr></i>, <i lang="en">STRUCTURED QUERY
+                            LANGUAGE</i>, ou LINGUAGEM
+                        DE CONSULTA ESTRUTURADA. Tem o intuito de organizar os dados em tabelas estruturizadas.</b>
+                </p>
+                <p>
+                    Cada tabela é composta por linhas e colunas, onde as colunas representam os atributos (ou campos) e
+                    as linhas representam os registros (ou tuplas).
+                    A relação entre as tabelas é estabelecida através de chaves estrangeiras, que são referências a
+                    chaves primárias de outras tabelas. Isso permite a criação de consultas complexas que relacionam
+                    múltiplas tabelas para extrair informações.
+                </p>
+
+                <details class="details details-rectangular">
+
+                    <summary class="summary summary-rectangular">
+                        Vantagens dos relacionais:
+                    </summary>
+
+                    <dl>
+                        <dt>
+                            Padronização:
+                        </dt>
+                        <dd>
+                            É uma linguagem padronizada pela indústria, o que facilita a interoperabilidade entre
+                            diferentes
+                            tipos de <abbr title="SISTEMAS DE GERENCIAMENTO DE BANCO DE DADOS">SGBD</abbr>.
+                        </dd>
+
+                        <dt>
+                            Simplicidade de uso:
+                        </dt>
+                        <dd>
+                            A linguagem é relativamente fácil de aprender e usar, especialmente para consultas básicas e
+                            manipulação de dados.
+                        </dd>
+
+                        <dt>
+                            Desempenho otimizado:
+                        </dt>
+                        <dd>
+                            Permite acesso rápido e eficiente aos dados, sendo capaz de recuperar múltiplos registros
+                            com
+                            comandos simples.
+                        </dd>
+
+                        <dt>
+                            Integridade dos dados:
+                        </dt>
+                        <dd>
+                            Oferece recursos para garantir a integridade e consistência dos dados nos banco de dados
+                            relacionais.
+                        </dd>
+
+                        <dt>
+                            Consultas estruturadas:
+                        </dt>
+                        <dd>
+                            Tem capacidade de realizar consultas complexas e bem estruturadas, especialmente com o uso
+                            de
+                            cláusulas, que facilitam a combinação de dados de várias tabelas.
+                        </dd>
+                    </dl>
+
+                </details>
+
+                <hr>
+
+                <details class="details details-rectangular">
+
+                    <summary class="summary summary-rectangular">
+                        Desvantagens dos relacionais:
+                    </summary>
+
+                    <dl>
+                        <dt>
+                            Custo de licenciamento:
+                        </dt>
+                        <dd>
+                            Algumas versões de <abbr title="SISTEMAS DE GERENCIAMENTO DE BANCO DE DADOS">SGBD</abbr>
+                            relacionais
+                            podem ter opções de licenciamento caras.
+                        </dd>
+
+                        <dt>
+                            Compatibilidade limitada:
+                        </dt>
+                        <dd>
+                            Uns tipos de <i lang="en"><abbr title="STRUCTURED QUERY LANGUAGE">SQL</abbr></i>, por
+                            exemplo, é
+                            projetado para rodar apenas em servidores baseados no <i lang="en">WINDOWS</i>,
+                            limitando assim a flexibilidade em ambientes multiplataforma.
+                        </dd>
+
+                        <dt>
+                            Rigidez estrutural:
+                        </dt>
+                        <dd>
+                            <i lang="en"><abbr title="STRUCTURED QUERY LANGUAGE">SQL</abbr></i> é baseado em esquemas
+                            rígidos, o
+                            que pode ser uma desvantagem quando se trabalha com dados não
+                            estruturados
+                            ou semiestruturados, onde o <i lang="en"><abbr
+                                    title="NOT ONLY STRUCTURED QUERY LANGUAGE">NOSQL</abbr></i> pode oferecer mais
+                            flexibilidade.
+                        </dd>
+                    </dl>
+
+                </details>
+
+            </details>
+
+            <hr>
+
+            <details class="details details-underlined">
+
+                <summary class="summary summary-underlined">
+                    BANCO DE DADOS NÃO RELACIONAL:
+                </summary>
+
+                <p>
+                    <b>BANCO DE DADOS NÃO RELACIONAIS, ou <i lang="en"><abbr
+                                title="NOT ONLY STRUCTURED QUERY LANGUAGE">NOSQL</abbr></i>, <i lang="en">NOT ONLY
+                            SQL</i>, NÃO APENAS <i lang="en"><abbr title="STRUCTURED QUERY LANGUAGE">SQL</abbr></i>,
+                        surgiram
+                        como uma alternativa aos bancos de dados tradicionais (faz referência aos relacionais aqui) para
+                        lidar com
+                        grandes volumes de dados e situações onde a flexibilidade na estrutura dos dados é mais
+                        importante do que a consistência e a integridade transacional.</b>
+                </p>
+                <p>
+                    Eles não dependem de tabelas e linhas como estrutura de dados, permitindo armazenar dados de
+                    maneira mais diversificada e menos estruturada.
+                </p>
+                <p>
+                    <b>E são basicamente, qualquer linguagem para <abbr
+                            title="SISTEMAS DE GERENCIAMENTO DE BANCO DE DADOS">SGBD</abbr> que não seja baseada no <i
+                            lang="en"><abbr title="STRUCTURED QUERY LANGUAGE">SQL</abbr></i></b>,
+                    por isso que é chamado de <i lang="en"><abbr
+                            title="NOT ONLY STRUCTURED QUERY LANGUAGE">NOSQL</abbr></i>.
+                </p>
+                <p>
+                    Alguns exemplos das categorias dos não relacionais incluem: <b>documentos, colunas, chave-valor,
+                        grafos, etc</b>
+                </p>
+
+                <details class="details details-rectangular">
+
+                    <summary class="summary summary-rectangular">
+                        Vantagens dos não relacionais:
+                    </summary>
+
+                    <dl>
+                        <dt>
+                            Flexibilidade:
+                        </dt>
+                        <dd>
+                            Esses banco de dados não relacionais permitem armazenar dados com estruturas variáveis, o
+                            que
+                            proporciona maior agilidade no desenvolvimento de aplicações que lidam com dados dinâmicos.
+                        </dd>
+
+                        <dt>
+                            Escalabilidade horizontal:
+                        </dt>
+                        <dd>
+                            É frequentemente escolhido por sua capacidade de escalar horizontalmente, distribuindo
+                            dados por vários servidores para lidar com cargas de trabalho muito grandes.
+                        </dd>
+
+                        <dt>
+                            Desempenho:
+                        </dt>
+                        <dd>
+                            Em muitos casos, especialmente com grandes volumes de dados e operações de
+                            leitura / escrita intensivas, esses bancos de dados podem oferecer melhor
+                            desempenho do que os <abbr title="BANCO DE DADOS">BD</abbr> relacionais.
+                        </dd>
+
+                        <dt>
+                            Suporte a dados não estruturados:
+                        </dt>
+                        <dd>
+                            É ideal para armazenar dados que não se encaixam bem em tabelas,
+                            como documentos <i lang="en">JSON</i>, pares chave-valor, grafos ou colunas de dados
+                            variáveis.
+                        </dd>
+
+                        <dt>
+                            Modelagem de dados:
+                        </dt>
+                        <dd>
+                            Permite a modelagem de dados mais próxima da forma como os desenvolvedores
+                            pensam e estruturam suas aplicações, reduzindo a necessidade de abstrações e
+                            conversões.
+                        </dd>
+                    </dl>
+
+                </details>
+
+                <hr>
+
+                <details class="details details-rectangular">
+
+                    <summary class="summary summary-rectangular">
+                        Desvantagens dos não relacionais:
+                    </summary>
+
+                    <dl>
+                        <dt>
+                            Falta de padrão:
+                        </dt>
+                        <dd>
+                            Ao contrário dos relacionais, não há um padrão universal para a linguagem de consulta
+                            em <i lang="en"><abbr title="NOT ONLY STRUCTURED QUERY LANGUAGE">NOSQL</abbr></i>, o que
+                            pode
+                            levar
+                            a uma curva de aprendizado mais acentuada e a problemas
+                            de interoperabilidade (esse termo se refere à capacidade de diversos sistemas trabalharem em
+                            conjunto).
+                        </dd>
+
+                        <dt>
+                            Integridade dos dados:
+                        </dt>
+                        <dd>
+                            Muitos sistemas relaxam as restrições de integridade referencial que são
+                            comuns em <abbr title="BANCO DE DADOS">BD</abbr> de <i lang="en"><abbr
+                                    title="STRUCTURED QUERY LANGUAGE">SQL</abbr></i>, o que pode dificultar a manutenção
+                            da
+                            consistência dos dados.
+                        </dd>
+
+                        <dt>
+                            Complexidade de consultas:
+                        </dt>
+                        <dd>
+                            Realizar consultas complexas, especialmente aquelas que envolvem junções de
+                            múltiplas tabelas ou coleções, pode ser mais difícil e menos eficiente em <i lang="en"><abbr
+                                    title="NOT ONLY STRUCTURED QUERY LANGUAGE">NOSQL</abbr></i>.
+                        </dd>
+
+                        <dt>
+                            Maturidade:
+                        </dt>
+                        <dd>
+                            Alguns bancos de dados não relacionais são relativamente novos e podem não ter a
+                            mesma maturidade e quantidade de recursos do que os <abbr
+                                title="SISTEMAS DE GERENCIAMENTO DE BANCO DE DADOS">SGBD</abbr> relacionais
+                            estabelecidos no
+                            mercado.
+                        </dd>
+
+                        <dt>
+                            ACID:
+                        </dt>
+                        <dd>
+                            Muitos <abbr title="BANCO DE DADOS">BD</abbr> não relacionais não oferecem suporte completo
+                            às
+                            propriedades
+                            ACID (Atomicidade, Consistência, Isolamento e Durabilidade), o que pode ser uma
+                            limitação crítica para aplicações que exigem transações altamente confiáveis.
+                        </dd>
+                    </dl>
+
+                </details>
+
+            </details>
+
+            <hr>
+
+            <p>
+                <b>OBSERVE:</b>
+            </p>
+            <p>
+                <b><i lang="en"><abbr title="NOT ONLY STRUCTURED QUERY LANGUAGE">NOSQL</abbr></i> não é uma substituição
+                    direta para <i lang="en"><abbr title="STRUCTURED QUERY LANGUAGE">SQL</abbr></i>, mas sim uma
+                    alternativa que é mais adequada
+                    para certos tipos de requisitos.</b> A escolha entre eles deve ser feita com base nas
+                necessidades específicas do projeto, como a estrutura dos dados, a escala desejada,
+                os requisitos de transação etc.
+            </p>
+            <p>
+                <b>E dependendo do caso, ambos podem ser usados ao mesmo tempo em um sistema híbrido, aproveitando as
+                    vantagens dos dois mundos.</b>
+            </p>
+        </article>
+
+        <article class="page">
+
+            <details class="details details-underlined">
+
+                <summary class="summary summary-underlined">
+                    Exemplos de sistema de gerenciamento de banco de dados:
+                </summary>
+
+                <p>
+                   <strong>⚠️ Aviso: As informações exibidas podem estar desatualizadas e estão sujeitas a alterações.</strong>
+                </p>
+                <p>
+                    Sempre consulte fontes oficiais ou atualizadas para confirmar os dados.
+                </p>
+
+                <details class="details details-rectangular">
+
+                    <summary class="summary summary-rectangular">
+                        RELACIONAL:
+                    </summary>
+
+                    <div class="responsive-table">
+                        <table class="information-table">
+                            <caption>
+                                sistema de gerenciamento de banco de dados relacional
+                            </caption>
+
+                            <thead>
+                                <tr>
+                                    <th scope="colgroup" colspan="3">
+                                        Informações básicas
+                                    </th>
+                                    <th scope="colgroup" colspan="2">
+                                        Detalhes técnicos
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">
+                                        Licença
+                                    </th>
+                                    <th scope="col">
+                                        Nome
+                                    </th>
+                                    <th scope="col">
+                                        Desenvolvedor
+                                    </th>
+                                    <th scope="col">
+                                        Ano de lançamento
+                                    </th>
+                                    <th scope="col">
+                                        Sistemas operacionais de servidor
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!--
+                                Licença: Comercial
+                            -->
+
+                                <tr>
+                                    <th scope="rowgroup" rowspan="3">
+                                        Licença comercial
+                                    </th>
+                                    <th scope="row">
+                                        Oracle
+                                    </th>
+                                    <td>
+                                        Oracle
+                                    </td>
+                                    <td>
+                                        1980
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                AIX
+                                            </li>
+                                            <li>
+                                                HP-UX
+                                            </li>
+                                            <li>
+                                                Linux
+                                            </li>
+                                            <li>
+                                                OS X
+                                            </li>
+                                            <li>
+                                                Solaris
+                                            </li>
+                                            <li>
+                                                Windows
+                                            </li>
+                                            <li>
+                                                z/OS
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        IBM Db2
+                                    </th>
+                                    <td>
+                                        IBM
+                                    </td>
+                                    <td>
+                                        1983
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                AIX
+                                            </li>
+                                            <li>
+                                                HP-UX
+                                            </li>
+                                            <li>
+                                                Linux
+                                            </li>
+                                            <li>
+                                                Solaris
+                                            </li>
+                                            <li>
+                                                Windows
+                                            </li>
+                                            <li>
+                                                z/OS
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Microsoft SQL Server
+                                    </th>
+                                    <td>
+                                        Microsoft
+                                    </td>
+                                    <td>
+                                        1989
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                Linux
+                                            </li>
+                                            <li>
+                                                Windows
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <tbody>
+                                <!--
+                                Licença: Código aberto
+                            -->
+
+                                <tr>
+                                    <th scope="rowgroup" rowspan="4">
+                                        Código aberto
+                                    </th>
+                                    <th scope="row">
+                                        MySQL
+                                    </th>
+                                    <td>
+                                        Oracle
+                                    </td>
+                                    <td>
+                                        1995
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                FreeBSD
+                                            </li>
+                                            <li>
+                                                Linux
+                                            </li>
+                                            <li>
+                                                OS X
+                                            </li>
+                                            <li>
+                                                Solaris
+                                            </li>
+                                            <li>
+                                                Windows
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        PostgreSQL
+                                    </th>
+                                    <td>
+                                        PostgreSQL Global Development Group
+                                    </td>
+                                    <td>
+                                        1989
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                FreeBSD
+                                            </li>
+                                            <li>
+                                                HP-UX
+                                            </li>
+                                            <li>
+                                                Linux
+                                            </li>
+                                            <li>
+                                                NetBSD
+                                            </li>
+                                            <li>
+                                                OpenBSD
+                                            </li>
+                                            <li>
+                                                OS X
+                                            </li>
+                                            <li>
+                                                Solaris
+                                            </li>
+                                            <li>
+                                                Unix
+                                            </li>
+                                            <li>
+                                                Windows
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        SQLite
+                                    </th>
+                                    <td>
+                                        Dwayne Richard Hipp
+                                    </td>
+                                    <td>
+                                        2000
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                Sem servidor
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        MariaDB
+                                    </th>
+                                    <td>
+                                        MariaDB plc (MariaDB Enterprise Platform and MariaDB)
+                                    </td>
+                                    <td>
+                                        2009
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                FreeBSD
+                                            </li>
+                                            <li>
+                                                Linux
+                                            </li>
+                                            <li>
+                                                Solaris
+                                            </li>
+                                            <li>
+                                                Windows
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5">
+                                        <p>
+                                            Cada um desses sistemas de gerenciamento possuem suas próprios
+                                            particularidade e jeitinhos únicos, e caso for do seu interesse
+                                            e curiosidade, uma pesquisa minuciosa sobre cada um deles
+                                            será bem interessante.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </details>
+
+                <hr>
+
+                <details class="details details-rectangular">
+
+                    <summary class="summary summary-rectangular">
+                        NÃO RELACIONAL:
+                    </summary>
+
+                    <div class="responsive-table">
+                        <table class="information-table">
+                            <caption>
+                                sistema de gerenciamento de banco de dados relacional
+                            </caption>
+
+                            <thead>
+                                <tr>
+                                    <th scope="colgroup" colspan="3">
+                                        Informações básicas
+                                    </th>
+                                    <th scope="colgroup" colspan="2">
+                                        Detalhes técnicos
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">
+                                        Licença
+                                    </th>
+                                    <th scope="col">
+                                        Nome
+                                    </th>
+                                    <th scope="col">
+                                        Desenvolvedor
+                                    </th>
+                                    <th scope="col">
+                                        Ano de lançamento
+                                    </th>
+                                    <th scope="col">
+                                        Sistemas operacionais de servidor
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!--
+                                Licença: Código aberto
+                            -->
+
+                                <tr>
+                                    <th scope="rowgroup" rowspan="4">
+                                        Código aberto
+                                    </th>
+                                    <th scope="row">
+                                        MongoDB
+                                    </th>
+                                    <td>
+                                        MongoDB, Inc
+                                    </td>
+                                    <td>
+                                        2009
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                Linux
+                                            </li>
+                                            <li>
+                                                OS X
+                                            </li>
+                                            <li>
+                                                Solaris
+                                            </li>
+                                            <li>
+                                                Windows
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Apache Cassandra
+                                    </th>
+                                    <td>
+                                        Apache Software Foundation (Originalmente desenvolvido pelo Facebook)
+                                    </td>
+                                    <td>
+                                        2008
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                BSD
+                                            </li>
+                                            <li>
+                                                Linux
+                                            </li>
+                                            <li>
+                                                OS X
+                                            </li>
+                                            <li>
+                                                Windows
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Redis
+                                    </th>
+                                    <td>
+                                        Equipe do projeto Redis, inspirada por Salvatore Sanfilippo (Patrocinado pela
+                                        Redis Inc)
+                                    </td>
+                                    <td>
+                                        2009
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                BSD
+                                            </li>
+                                            <li>
+                                                Linux
+                                            </li>
+                                            <li>
+                                                OS X
+                                            </li>
+                                            <li>
+                                                Windows
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Neo4j
+                                    </th>
+                                    <td>
+                                        Neo4j, Inc
+                                    </td>
+                                    <td>
+                                        2007
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>
+                                                Linux
+                                            </li>
+                                            <li>
+                                                OS X
+                                            </li>
+                                            <li>
+                                                Solaris
+                                            </li>
+                                            <li>
+                                                Windows
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5">
+                                        <p>
+                                            Cada um desses sistemas de gerenciamento possuem suas próprios
+                                            particularidade e jeitinhos únicos, e caso for do seu interesse
+                                            e curiosidade, uma pesquisa minuciosa sobre cada um deles
+                                            será bem interessante.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </details>
+
+            </details>
+
+        </article>
+
+    </main>
+
+    <footer>
+
+        <!--
+            Componente Web - Footer
+        -->
+        <app-footer></app-footer>
+        <script src="/assets/components/web-component/footer/footer.js" defer>
+        </script>
+
+    </footer>
+
+</body>
+
+</html>
