@@ -2,7 +2,7 @@
 
 // Ponto de partida para endereçamentos
 const base = document.createElement("base");
-base.href = "http://127.0.0.1:5500/";
+base.href = "https://b-ariel.github.io/";
 document.head.appendChild(base);
 
 /*----------*----------*----------*/
