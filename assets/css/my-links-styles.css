@@ -1,0 +1,230 @@
+/*----------*----------*----------*/
+
+/* Importação de fontes tipográficas - typeface
+*/
+
+/* Fonte do: Título
+*/
+@font-face {
+    font-family: "lemonada";
+    src: url("/assets/fonts/lemonada/lemonada-variable-font_wght.ttf") format("truetype");
+}
+/* Fonte do: Rodapé
+*/
+@font-face {
+    font-family: "po-de-guarana";
+    src: url("/assets/fonts/po-de-guarana/po-de-guarana.ttf") format("truetype");
+}
+
+/*----------*----------*----------*/
+
+/*CSS da estrutura: my-links.html
+*/
+.my-links * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: italic;
+}
+
+body.my-links {
+    background: radial-gradient(circle, rgb(100, 100, 100), rgb(50, 50, 50));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    font-family: "lemonada";
+}
+
+/* Formatação do "CABEÇALHO"
+*/
+
+/* Formatação do "RODAPÉ"
+*/
+body.my-links footer {
+    color: rgb(0, 0, 0);
+    font-family: "po-de-guarana";
+    font-size: clamp(1rem, 2vw, 3rem);
+    padding: 1rem;
+}
+
+footer #footer-main,
+footer #footer-secondary {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+footer #footer-secondary ul {
+    list-style: none;
+}
+
+/* Formatação do "CONTAINER PRINCIPAL"
+*/
+.my-links main.container {
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.5);
+    padding: clamp(1rem, 5vw, 3rem);
+    border-radius: clamp(0.5rem, 5vw, 3rem);
+    box-shadow: 0 clamp(0.2rem, 2vw, 1rem) clamp(0.5rem, 5vw, 3rem) rgb(0, 0, 0);
+    max-width: 80%;
+    width: auto;
+}
+
+.my-links main.container h1,
+.my-links main.container h2,
+.my-links main.container h3,
+.my-links main.container h4,
+.my-links main.container h5,
+.my-links main.container h6 {
+    font-size: clamp(1rem, 2vw, 3rem);
+    margin-bottom: 0.5rem;
+    color: rgb(0, 0, 0);
+}
+
+/* Formatação da "IMAGEM DE PERFIL"
+*/
+.my-links .profile figure img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 5vw;
+}
+
+/* Formatação dos "LINKS ESCALADOS"
+*/
+.my-links .links a {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    background: rgb(0, 150, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: all 0.5s ease;
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+    margin: clamp(0.5rem, 2vw, 1.5rem) 0;
+    border-radius: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(1rem, 2vw, 3rem);
+}
+
+.my-links .links a:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 90, 180);
+    transform: scale(1.1);
+}
+
+/* Formatação dos "ÍCONES"
+*/
+.my-links .links-icone img {
+    width: auto;
+    height: clamp(1.5rem, 10vw, 5rem);
+    transition: all 0.5s ease;
+}
+
+.my-links .links-icone a .logo-black,
+.my-links .links-icone a:hover .logo-white,
+.my-links .links-icone a .mark-black,
+.my-links .links-icone a:hover .mark-white {
+    display: inline;
+}
+
+.my-links .links-icone a .logo-white,
+.my-links .links-icone a:hover .logo-black,
+.my-links .links-icone a .mark-white,
+.my-links .links-icone a:hover .mark-black {
+    display: none;
+}
+
+/* Formatação dos "LINKS DO RODAPE" - Se encontra no footer
+*/
+footer .links-footer a {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    overflow: hidden;
+    color: rgb(0, 0, 255);
+    transition: 0.5s ease;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+footer .links-footer a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 255, 255, 0.5);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+footer .links-footer a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+footer .links-footer a:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.5s ease;
+}
+
+/*----------*----------*----------*/
+
+/* Responsividade - Mobile First:
+Foco em dispositivos com telas menores, para assim em seguida, ajustar para telas maiores
+*/
+
+/* Possui suporte a essas telas de referência:
+Mobile P: largura máxima: 360px
+Mobile M: largura máxima: 480px
+Mobile G / Phablet: largura máxima: 576px
+Tablet P: largura máxima: 768px
+Tablet L: largura máxima: 992px
+Laptop: largura máxima: 1200px
+Desktop G: largura mínima: 1200px
+4K: largura mínima: 1440px
+*/
+
+/* Mobile Pequeno
+Padrão usado como referência para aplicação do CSS
+@media screen and (max-width: 360px){}
+*/
+
+/* Mobile Médio
+Padrão de referência: se adapta
+@media screen and (max-width: 480px){}
+*/
+
+/* Mobile Grande / Phablet (phone + tablet)
+Padrão de referência: se adapta
+@media screen and (max-width: 576px){}
+*/
+
+/* Tablet Portrait (tablet modo: retrato)
+Padrão de referência: se adapta
+@media screen and (max-width: 768px){}
+*/
+
+/* Tablet Landscape (tablet modo: paisagem)
+Padrão de referência: se adapta
+@media screen and (max-width: 992px){}
+*/
+
+/* Laptop
+Padrão de referência: se adapta
+@media screen and (max-width: 1200px){}
+*/
+
+/* Desktop Grande
+Padrão de referência: se adapta
+@media screen and (min-width: 1200px){}
+*/
+
+/* 4K
+Padrão de referência: se adapta
+@media screen and (min-width: 1440px){}
+*/
+
+/*----------*----------*----------*/
