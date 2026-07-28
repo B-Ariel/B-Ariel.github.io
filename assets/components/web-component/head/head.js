@@ -116,13 +116,3 @@ class AppHead extends HTMLElement {
 customElements.define("app-head", AppHead);
 
 /*----------*----------*----------*/
-
-/*
-  Endereço local:
-  http://127.0.0.1:5500/
-*/
-
-/*
-  Endereço hospedado:
-  https://b-ariel.github.io/
-*/
